@@ -77,7 +77,7 @@
           "width": "20",
           "straight": 264.3,
           "elevation": 0.9,
-          "bias": "レイアウトは芝コースとほぼ同じ。1周1487mは地方場のダートでは中京に次ぐ大きさだが、直線は264.3mと短い。",
+          "bias": "レイアウトは芝コースとほぼ同じ。1周1487mはローカル場のダートでは中京に次ぐ大きさだが、直線は264.3mと短い。",
           "sources": [
             "https://www.jra.go.jp/facilities/race/sapporo/course/index.html"
           ],
@@ -1452,7 +1452,7 @@
         {
           "surface": "ダート",
           "course": null,
-          "circumference": null,
+          "circumference": "外1600m／内1376m",
           "width": "25",
           "straight": "400m（ゴールまで330m）",
           "elevation": "1.54",
@@ -1855,7 +1855,7 @@
         {
           "surface": "ダート",
           "course": null,
-          "circumference": null,
+          "circumference": "外1400m／内1250m",
           "width": "外25／内20",
           "straight": "362m（ゴールまで308m）",
           "elevation": "0（平坦）",
@@ -1946,7 +1946,7 @@
         {
           "surface": "ダート",
           "course": null,
-          "circumference": null,
+          "circumference": "外1600m／内1400m",
           "width": "25",
           "straight": "外486m（右・ゴールまで386m／左・300m）／内386m（ゴールまで286m）",
           "elevation": "0（平坦）",
