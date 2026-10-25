@@ -108,6 +108,9 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
       ]
     },
     {
@@ -222,6 +225,9 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
       ]
     },
     {
@@ -340,6 +346,9 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
       ]
     },
     {
@@ -499,6 +508,9 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
       ]
     },
     {
@@ -641,7 +653,10 @@
           }
         }
       ],
-      "handWritten": true
+      "handWritten": true,
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
+      ]
     },
     {
       "slug": "nakayama",
@@ -807,6 +822,9 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
       ]
     },
     {
@@ -931,6 +949,9 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
       ]
     },
     {
@@ -1100,7 +1121,10 @@
           }
         }
       ],
-      "handWritten": true
+      "handWritten": true,
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
+      ]
     },
     {
       "slug": "hanshin",
@@ -1259,6 +1283,9 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
       ]
     },
     {
@@ -1370,17 +1397,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.jra.go.jp/keiba/record/"
       ]
     },
     {
       "slug": "obihiro",
       "name": "帯広競馬場",
       "region": "local",
-      "location": null,
+      "location": "北海道帯広市西13条南9丁目",
       "order": 31,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/01/"
       ],
       "surfaces": [
         {
@@ -1389,7 +1420,7 @@
           "circumference": null,
           "width": "21",
           "straight": 200,
-          "elevation": null,
+          "elevation": "第1障害1.0m／第2障害1.6m",
           "bias": "直線200mのコースに高さ1.0mの第1障害と1.6mの第2障害がある。ソリの最後尾がゴールラインを通過した瞬間にゴール。",
           "sources": [
             "https://www.keiba.go.jp/guide/course/",
@@ -1401,17 +1432,21 @@
           "starts": {},
           "records": {}
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "monbetsu",
       "name": "門別競馬場",
       "region": "local",
-      "location": null,
+      "location": "北海道沙流郡日高町富川駒丘76-1",
       "order": 32,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/02/"
       ],
       "surfaces": [
         {
@@ -1488,17 +1523,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "morioka",
       "name": "盛岡競馬場",
       "region": "local",
-      "location": null,
+      "location": "岩手県盛岡市新庄字上八木田10",
       "order": 33,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/03/"
       ],
       "surfaces": [
         {
@@ -1621,17 +1660,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "mizusawa",
       "name": "水沢競馬場",
       "region": "local",
-      "location": null,
+      "location": "岩手県奥州市水沢姉体町字阿久戸1-2",
       "order": 34,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/04/"
       ],
       "surfaces": [
         {
@@ -1708,17 +1751,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "urawa",
       "name": "浦和競馬場",
       "region": "local",
-      "location": null,
+      "location": "埼玉県さいたま市南区大谷場1-8-42",
       "order": 35,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/05/"
       ],
       "surfaces": [
         {
@@ -1788,17 +1835,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "funabashi",
       "name": "船橋競馬場",
       "region": "local",
-      "location": null,
+      "location": "千葉県船橋市若松1-2-1",
       "order": 36,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/06/"
       ],
       "surfaces": [
         {
@@ -1875,17 +1926,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "oi",
       "name": "大井競馬場",
       "region": "local",
-      "location": null,
+      "location": "東京都品川区勝島2-1-2",
       "order": 37,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/07/"
       ],
       "surfaces": [
         {
@@ -1983,17 +2038,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "kawasaki",
       "name": "川崎競馬場",
       "region": "local",
-      "location": null,
+      "location": "神奈川県川崎市川崎区富士見1-5-1",
       "order": 38,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/08/"
       ],
       "surfaces": [
         {
@@ -2056,17 +2115,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "kanazawa",
       "name": "金沢競馬場",
       "region": "local",
-      "location": null,
+      "location": "石川県金沢市八田町西1",
       "order": 39,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/09/"
       ],
       "surfaces": [
         {
@@ -2150,17 +2213,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "kasamatsu",
       "name": "笠松競馬場",
       "region": "local",
-      "location": null,
+      "location": "岐阜県羽島郡笠松町若葉町12番地",
       "order": 40,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/10/"
       ],
       "surfaces": [
         {
@@ -2223,17 +2290,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "nagoya",
       "name": "名古屋競馬場",
       "region": "local",
-      "location": null,
+      "location": "愛知県弥富市駒野町1番地",
       "order": 41,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/11/"
       ],
       "surfaces": [
         {
@@ -2303,17 +2374,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "sonoda",
       "name": "園田競馬場",
       "region": "local",
-      "location": null,
+      "location": "兵庫県尼崎市田能2-1-1",
       "order": 42,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/12/"
       ],
       "surfaces": [
         {
@@ -2376,17 +2451,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "himeji",
       "name": "姫路競馬場",
       "region": "local",
-      "location": null,
+      "location": "兵庫県姫路市広峰2丁目7-80",
       "order": 43,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/13/"
       ],
       "surfaces": [
         {
@@ -2442,17 +2521,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "kochi",
       "name": "高知競馬場",
       "region": "local",
-      "location": null,
+      "location": "高知県高知市長浜宮田2000番地",
       "order": 44,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/14/"
       ],
       "surfaces": [
         {
@@ -2522,17 +2605,21 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     },
     {
       "slug": "saga",
       "name": "佐賀競馬場",
       "region": "local",
-      "location": null,
+      "location": "佐賀県鳥栖市江島町字西谷3256-228",
       "order": 45,
       "sources": [
         "https://www.keiba.go.jp/guide/course/",
-        "https://www.keiba.go.jp/guide/course_record/"
+        "https://www.keiba.go.jp/guide/course_record/",
+        "https://www.keiba.go.jp/guide/15/"
       ],
       "surfaces": [
         {
@@ -2609,6 +2696,9 @@
             }
           }
         }
+      ],
+      "recordSources": [
+        "https://www.keiba.go.jp/guide/course_record/"
       ]
     }
   ],
@@ -2626,14 +2716,14 @@
           "date": "1月23日（金曜）"
         },
         {
-          "name": "ゴドルフィンマイル",
+          "name": "ゴドルフィンマイル（G2）",
           "surface": "ダート",
           "direction": "左",
           "distance": 1600,
           "date": "3月28日（土曜）"
         },
         {
-          "name": "ドバイゴールドカップ",
+          "name": "ドバイゴールドカップ（G2）",
           "surface": "芝",
           "direction": "左",
           "distance": 3200,
@@ -2790,21 +2880,21 @@
       "country": "サウジアラビア",
       "races": [
         {
-          "name": "サウジダービー",
+          "name": "サウジダービー（G3）",
           "surface": "ダート",
           "direction": "左",
           "distance": 1600,
           "date": "2月14日（土曜）"
         },
         {
-          "name": "リヤドダートスプリント",
+          "name": "リヤドダートスプリント（G2）",
           "surface": "ダート",
           "direction": "左",
           "distance": 1200,
           "date": "2月14日（土曜）"
         },
         {
-          "name": "1351ターフスプリント",
+          "name": "1351ターフスプリント（G2）",
           "surface": "芝",
           "direction": "左",
           "distance": 1351,
@@ -2818,7 +2908,7 @@
           "date": "2月14日（土曜）"
         },
         {
-          "name": "レッドシーターフハンデキャップ",
+          "name": "レッドシーターフハンデキャップ（G2）",
           "surface": "芝",
           "direction": "左",
           "distance": 3000,

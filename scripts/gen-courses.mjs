@@ -89,7 +89,15 @@ function page(venue, surface, distance, order) {
         `| ${cell(rec.time)} | ${cell(rec.horse)} | ${cell(rec.jockey)} | ${cell(rec.date)} |`,
       ].join("\n")
     : "コースレコードは未確認。";
-  const sources = [...new Set([...surface.sources, ...venue.sources])].map((u) => `- ${u}`).join("\n");
+  const sources = [
+    ...new Set([
+      ...surface.sources,
+      ...venue.sources,
+      ...(rec ? (venue.recordSources ?? []) : []),
+    ]),
+  ]
+    .map((u) => `- ${u}`)
+    .join("\n");
 
   return `---
 title: ${JSON.stringify(title)}
@@ -307,6 +315,65 @@ for (const venue of data.venues) {
   }
 }
 
+function courseIndex(venues, overseas) {
+  const row = (v) =>
+    `| [${v.name}](/racecourses/${v.slug}/) | ${v.location ?? "未確認"} | ${v.surfaces
+      .map((s) => s.surface + (s.course ? `（${s.course}）` : ""))
+      .join("、")} |`;
+  const central = venues.filter((v) => v.region === "central").sort((a, b) => a.order - b.order);
+  const local = venues.filter((v) => v.region === "local").sort((a, b) => a.order - b.order);
+  const races = overseas.reduce((n, v) => n + v.races.length, 0);
+  const countries = new Set(overseas.map((v) => v.country)).size;
+  const total = venues.reduce(
+    (n, v) => n + v.surfaces.reduce((m, s) => m + s.distances.length, 0),
+    0,
+  );
+
+  return `---
+title: 競馬場一覧
+description: 中央・地方・海外の競馬場を、距離別ページへのリンク付きでまとめる。
+sidebar:
+  order: 2
+---
+
+距離別のページは ${total} 件。各ページにスタート位置・直線・高低差・傾向・出典を載せている。
+
+## 中央競馬（JRA）
+
+| 競馬場 | 所在地 | コース |
+| --- | --- | --- |
+${central.map(row).join("\n")}
+
+## 地方競馬
+
+| 競馬場 | 所在地 | コース |
+| --- | --- | --- |
+${local.map(row).join("\n")}
+
+## 海外
+
+JRA が馬券を発売する海外の会場 ${overseas.length} か所（${countries} か国・${races} 競走）は [海外の競馬場](/racecourses/overseas/) にまとめている。
+
+<Aside type="note" title="未確認について">
+  一次情報で裏取りできなかった項目は「未確認」と書いている。推測では埋めていない。
+</Aside>
+
+## ページを足す
+
+距離ページは \`src/data/courses.json\` から生成する。手で MDX を書く必要はない。
+
+1. \`courses.json\` の該当会場に距離を足す（\`sources\` は必須）
+2. \`pnpm gen:courses\` を実行
+3. \`pnpm lint:docs\` と \`pnpm build\` で確認
+
+## 出典
+
+- 中央 10 場のコースデータ: https://www.jra.go.jp/facilities/race/
+- 地方 15 場のコースデータ: https://www.keiba.go.jp/guide/course/
+- 海外の指定競走: https://www.jra.go.jp/keiba/overseas/racelist/release.html
+`;
+}
+
 const overseas = data.overseas ?? [];
 if (overseas.length > 0) {
   overseas.forEach(validateOverseas);
@@ -326,5 +393,8 @@ if (overseas.length > 0) {
   await writeFile(join(dir, "index.mdx"), overseasIndex(sorted), "utf8");
   written += 1;
 }
+
+await writeFile(join(OUT, "index.mdx"), courseIndex(data.venues, overseas), "utf8");
+written += 1;
 
 console.log(`✓ ${data.venues.length} 場 / ${overseas.length} 海外会場 / ${written} ページを生成 → src/content/docs/racecourses/`);
