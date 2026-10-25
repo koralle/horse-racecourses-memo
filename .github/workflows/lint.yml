@@ -22,15 +22,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      # pnpm / Node / ストアのキャッシュ / `pnpm install --frozen-lockfile` を
-      # まとめて行う。バージョンはこのファイルで固定する。
+      # pnpm は package.json の `packageManager`、Node はここで固定する。
+      # ストアのキャッシュと `pnpm install --frozen-lockfile` まで行う。
       - name: Setup
         uses: pnpm/setup@fa36a5ef7dcdefc3a7cb25655c122e00cf6e636e # v3.1.2
         with:
-          version: 12.14.0
           runtime: node@24
           cache: true
           require-lockfile: true
+
+      - name: Format check
+        shell: bash
+        run: pnpm run fmt:check
 
       # `lint` はビルドが書く `.nimbus/routes.json` と `.nimbus/lint.json` を
       # 読むので、build と lint は同じジョブに置く。

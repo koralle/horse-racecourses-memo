@@ -36,7 +36,8 @@ function initPagination(root: HTMLElement): () => void {
       // A cut-off title shows in full on hover.
       const title = item.querySelector<HTMLElement>("[data-slot='pagination-title']");
       if (title) {
-        const cut = title.scrollWidth > title.clientWidth || title.scrollHeight > title.clientHeight;
+        const cut =
+          title.scrollWidth > title.clientWidth || title.scrollHeight > title.clientHeight;
         if (cut) item.title = title.textContent?.trim() ?? "";
         else item.removeAttribute("title");
       }
@@ -76,7 +77,8 @@ function initPagination(root: HTMLElement): () => void {
   };
   const listens = root.dataset.keys !== "false";
   if (listens) {
-    for (const item of items) item.setAttribute("aria-keyshortcuts", item.dataset.nbPaginationKey ?? "");
+    for (const item of items)
+      item.setAttribute("aria-keyshortcuts", item.dataset.nbPaginationKey ?? "");
     root.addEventListener("keydown", onKey);
   }
 

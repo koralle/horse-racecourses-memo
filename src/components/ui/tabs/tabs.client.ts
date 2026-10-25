@@ -15,9 +15,9 @@ function initTabContainer(container: HTMLElement): () => void {
 
   // Scope to this container so a nested <Tabs>'s triggers don't flip the
   // parent into manual mode (or vice-versa), independent of mount order.
-  const existingTriggers = Array.from(
-    container.querySelectorAll("[data-nb-tabs-trigger]"),
-  ).filter((t) => (t as HTMLElement).closest("[data-nb-tabs]") === container);
+  const existingTriggers = Array.from(container.querySelectorAll("[data-nb-tabs-trigger]")).filter(
+    (t) => (t as HTMLElement).closest("[data-nb-tabs]") === container,
+  );
   const synthesize = existingTriggers.length === 0;
   // Only this container's own panels — exclude a nested <Tabs>'s panels,
   // whose nearest [data-nb-tabs] ancestor is the inner container.
@@ -78,8 +78,7 @@ function initTabContainer(container: HTMLElement): () => void {
     // works in both directions; RTL scrollLeft runs negative.
     onActivate: (index) => {
       if (!tablist) return;
-      const trigger =
-        tablist.querySelectorAll<HTMLElement>("[data-nb-tabs-trigger]")[index];
+      const trigger = tablist.querySelectorAll<HTMLElement>("[data-nb-tabs-trigger]")[index];
       if (!trigger) return;
       const list = tablist.getBoundingClientRect();
       const tab = trigger.getBoundingClientRect();
@@ -112,9 +111,7 @@ function initTabContainer(container: HTMLElement): () => void {
   // Cross-instance sync is keyed by trigger label; duplicate labels in a group
   // resolve by first-match and activate the wrong panel. Surface it in dev.
   if (import.meta.env.DEV && syncKey && tablist) {
-    const labels = Array.from(
-      tablist.querySelectorAll<HTMLElement>("[data-nb-tabs-trigger]"),
-    )
+    const labels = Array.from(tablist.querySelectorAll<HTMLElement>("[data-nb-tabs-trigger]"))
       .filter((t) => t.closest("[data-nb-tabs]") === container)
       .map((t) => (t.textContent ?? "").trim());
     const dupes = [...new Set(labels.filter((l, i) => labels.indexOf(l) !== i))];

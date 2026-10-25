@@ -9,7 +9,10 @@ export const prerender = true;
 // One card per page, written at the page's `ogImageUrl`: each key is the
 // path under /og/, `.png` included.
 export const getStaticPaths = (async () =>
-  Object.entries(await getOgImagePages()).map(([slug, page]) => ({ params: { slug }, props: { page } }))) satisfies GetStaticPaths;
+  Object.entries(await getOgImagePages()).map(([slug, page]) => ({
+    params: { slug },
+    props: { page },
+  }))) satisfies GetStaticPaths;
 
 type Page = Awaited<ReturnType<typeof getOgImagePages>>[string];
 

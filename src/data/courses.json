@@ -7,9 +7,7 @@
       "region": "central",
       "location": "北海道札幌市中央区",
       "order": 11,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/sapporo/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/sapporo/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -19,17 +17,8 @@
           "straight": 266.1,
           "elevation": 0.7,
           "bias": "ほぼ平坦で、コーナーの占める割合が大きく円形に近い。直線は266.1mと短く、後方一気の追い込みは苦戦傾向。半面、捲りの割合が他場より高い。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/sapporo/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1200,
-            1500,
-            1800,
-            2000,
-            2600
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/sapporo/course/index.html"],
+          "distances": [1000, 1200, 1500, 1800, 2000, 2600],
           "starts": {},
           "records": {
             "1000": {
@@ -78,14 +67,8 @@
           "straight": 264.3,
           "elevation": 0.9,
           "bias": "レイアウトは芝コースとほぼ同じ。1周1487mはローカル場のダートでは中京に次ぐ大きさだが、直線は264.3mと短い。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/sapporo/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1700,
-            2400
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/sapporo/course/index.html"],
+          "distances": [1000, 1700, 2400],
           "starts": {},
           "records": {
             "1000": {
@@ -109,9 +92,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "hakodate",
@@ -119,9 +100,7 @@
       "region": "central",
       "location": "北海道函館市駒場町",
       "order": 12,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/hakodate/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/hakodate/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -131,17 +110,8 @@
           "straight": 262.1,
           "elevation": 3.5,
           "bias": "直線262.1mは全場で最も短く、逃げ・先行タイプの活躍が目立つ。後方一気の追い込みは苦戦。高低差3.5mで、2〜4コーナーにかけて上り勾配が続く。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/hakodate/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1200,
-            1700,
-            1800,
-            2000,
-            2600
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/hakodate/course/index.html"],
+          "distances": [1000, 1200, 1700, 1800, 2000, 2600],
           "starts": {
             "1200": "2コーナーポケットからスタート。序盤の先行争いはほぼ上り勾配で展開する。",
             "2600": "向正面半ばにスタート地点があり、スタートからゴールまでに上り勾配を2回走る。"
@@ -193,14 +163,8 @@
           "straight": 260.3,
           "elevation": 3.5,
           "bias": "直線260.3mは全場で最も短い。逃げ・先行タイプが優勢。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/hakodate/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1700,
-            2400
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/hakodate/course/index.html"],
+          "distances": [1000, 1700, 2400],
           "starts": {
             "1000": "序盤の先行争いはほぼ丸々、上り勾配で繰り広げられる。"
           },
@@ -226,9 +190,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "fukushima",
@@ -236,9 +198,7 @@
       "region": "central",
       "location": "福島県福島市松浪町",
       "order": 13,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/fukushima/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/fukushima/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -248,17 +208,8 @@
           "straight": 292,
           "elevation": 1.9,
           "bias": "1周1600mはJRA全場で最もコンパクト。直線292mはローカル場として標準的だが差しもまずまず決まる。残り170m付近から残り50m付近までは高低差1.2mの上り勾配。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/fukushima/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1200,
-            1700,
-            1800,
-            2000,
-            2600
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/fukushima/course/index.html"],
+          "distances": [1000, 1200, 1700, 1800, 2000, 2600],
           "starts": {},
           "records": {
             "1000": {
@@ -307,15 +258,8 @@
           "straight": 295.7,
           "elevation": 2.1,
           "bias": "水準以上に逃げ馬の活躍が目立つ。起伏の構成は芝コースとほぼ同じ。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/fukushima/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1150,
-            1700,
-            2400
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/fukushima/course/index.html"],
+          "distances": [1000, 1150, 1700, 2400],
           "starts": {
             "1150": "芝コースからスタートする。"
           },
@@ -347,9 +291,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "niigata",
@@ -357,9 +299,7 @@
       "region": "central",
       "location": "新潟県新潟市北区",
       "order": 14,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/niigata/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -369,12 +309,8 @@
           "straight": 1000,
           "elevation": null,
           "bias": "日本唯一の直線コース。1,000m すべてが直線で、外枠優勢の傾向がある。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
-          ],
-          "distances": [
-            1000
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/niigata/course/index.html"],
+          "distances": [1000],
           "starts": {},
           "records": {
             "1000": {
@@ -393,16 +329,8 @@
           "straight": 358.7,
           "elevation": 0.8,
           "bias": "直線358.7mは中山（310m）よりかなり長い。差し馬が水準以上の成績を残している。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
-          ],
-          "distances": [
-            1200,
-            1400,
-            2000,
-            2200,
-            2400
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/niigata/course/index.html"],
+          "distances": [1200, 1400, 2000, 2200, 2400],
           "starts": {},
           "records": {
             "1200": {
@@ -433,17 +361,8 @@
           "straight": 658.7,
           "elevation": 2.2,
           "bias": "1周2223m・直線658.7mはともに日本最長。序盤から中盤は緩やかなペースで流れ、直線の末脚比べになりやすい。3〜4コーナーに高低差1.6mの下りがあり、自然と勢いがつく。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
-          ],
-          "distances": [
-            1400,
-            1600,
-            1800,
-            2000,
-            3000,
-            3200
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/niigata/course/index.html"],
+          "distances": [1400, 1600, 1800, 2000, 3000, 3200],
           "starts": {},
           "records": {
             "1600": {
@@ -468,16 +387,8 @@
           "straight": 353.9,
           "elevation": 0.6,
           "bias": "直線353.9mは全国で3番目の長さ。逃げ・先行タイプが優勢。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1200,
-            1700,
-            1800,
-            2500
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/niigata/course/index.html"],
+          "distances": [1000, 1200, 1700, 1800, 2500],
           "starts": {
             "1200": "芝コースからスタートする。"
           },
@@ -509,9 +420,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "tokyo",
@@ -519,9 +428,7 @@
       "region": "central",
       "location": "東京都府中市日吉町",
       "order": 15,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/tokyo/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/tokyo/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -531,20 +438,8 @@
           "straight": 525.9,
           "elevation": 2.7,
           "bias": "直線525.9mは日本一。1コーナーから向正面半ばにかけて高低差1.9mの長い下り、3コーナー手前に高低差1.5mの上り、直線残り460〜300mに2つめの上りがある。カーブがゆったりして紛れが少なく、差し・追い込み馬の活躍が他場以上に目立つ。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/tokyo/course/index.html"
-          ],
-          "distances": [
-            1400,
-            1600,
-            1800,
-            2000,
-            2300,
-            2400,
-            2500,
-            2600,
-            3400
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/tokyo/course/index.html"],
+          "distances": [1400, 1600, 1800, 2000, 2300, 2400, 2500, 2600, 3400],
           "starts": {
             "1600": "2コーナー付近に発走地点がある。"
           },
@@ -607,17 +502,8 @@
           "straight": 501.6,
           "elevation": 2.5,
           "bias": "1周1899m・直線501.6mは日本一のスケール。直線の上り坂は高低差2.4mで芝コースを上回る。直線の末脚比べになりやすく、差し・追い込み馬が目立つ。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/tokyo/course/index.html"
-          ],
-          "distances": [
-            1200,
-            1300,
-            1400,
-            1600,
-            2100,
-            2400
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/tokyo/course/index.html"],
+          "distances": [1200, 1300, 1400, 1600, 2100, 2400],
           "starts": {
             "1600": "芝コースからスタートする。"
           },
@@ -656,9 +542,7 @@
         }
       ],
       "handWritten": true,
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "nakayama",
@@ -666,9 +550,7 @@
       "region": "central",
       "location": "千葉県船橋市古作",
       "order": 16,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/nakayama/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/nakayama/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -678,16 +560,8 @@
           "straight": 310,
           "elevation": 5.3,
           "bias": "高低差5.3mはJRA全10場で最大。ゴール前の急坂は残り180〜70m、高低差2.2m・最大勾配2.24%で10場最大。2・3コーナーがタイトな小回りコース。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/nakayama/course/index.html"
-          ],
-          "distances": [
-            1800,
-            2000,
-            2500,
-            3200,
-            3600
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/nakayama/course/index.html"],
+          "distances": [1800, 2000, 2500, 3200, 3600],
           "starts": {
             "2500": "発走地点は外回りコース上に設けられている。"
           },
@@ -726,17 +600,8 @@
           "straight": 310,
           "elevation": 5.3,
           "bias": "1周1839.7m。直線は内回りと同じ310mで、4大場（東京・中山・京都・阪神）の中では最も短い。起伏は内回りと同じ構成。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/nakayama/course/index.html"
-          ],
-          "distances": [
-            1200,
-            1600,
-            2200,
-            2600,
-            3200,
-            4000
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/nakayama/course/index.html"],
+          "distances": [1200, 1600, 2200, 2600, 3200, 4000],
           "starts": {},
           "records": {
             "1200": {
@@ -773,17 +638,8 @@
           "straight": 308,
           "elevation": 4.5,
           "bias": "起伏の構成は芝コースとほぼ同じ。1周1493m・直線308mで、全体のサイズはローカル場を少し大きくした程度。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/nakayama/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1200,
-            1700,
-            1800,
-            2400,
-            2500
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/nakayama/course/index.html"],
+          "distances": [1000, 1200, 1700, 1800, 2400, 2500],
           "starts": {
             "1200": "芝コースからスタートする。"
           },
@@ -827,9 +683,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "chukyo",
@@ -837,9 +691,7 @@
       "region": "central",
       "location": "愛知県豊明市間米町",
       "order": 17,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/chukyo/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/chukyo/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -849,18 +701,8 @@
           "straight": 412.5,
           "elevation": 3.5,
           "bias": "直線412.5mは京都の外回りより長い。直線に向いてすぐの上り坂は勾配約2%・高低差約2mで、阪神や東京より急。芝・ダートともに差し・追い込み馬が水準以上に活躍する。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/chukyo/course/index.html"
-          ],
-          "distances": [
-            1200,
-            1300,
-            1400,
-            1600,
-            2000,
-            2200,
-            3000
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/chukyo/course/index.html"],
+          "distances": [1200, 1300, 1400, 1600, 2000, 2200, 3000],
           "starts": {},
           "records": {
             "1200": {
@@ -909,16 +751,8 @@
           "straight": 410.7,
           "elevation": 3.4,
           "bias": "1周1530mは東京・京都に次いで3位、直線410.7mは東京に次いで長い。差し・追い込み馬が水準以上に活躍する。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/chukyo/course/index.html"
-          ],
-          "distances": [
-            1200,
-            1400,
-            1800,
-            1900,
-            2500
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/chukyo/course/index.html"],
+          "distances": [1200, 1400, 1800, 1900, 2500],
           "starts": {
             "1400": "芝コースからスタートする。"
           },
@@ -956,9 +790,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "kyoto",
@@ -966,9 +798,7 @@
       "region": "central",
       "location": "京都府京都市伏見区",
       "order": 18,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/kyoto/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/kyoto/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -978,16 +808,8 @@
           "straight": 328.4,
           "elevation": 3.1,
           "bias": "外回りよりコンパクトな造りで、逃げ・先行タイプが優勢。3・4コーナーのカーブもタイト。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/kyoto/course/index.html"
-          ],
-          "distances": [
-            1100,
-            1200,
-            1400,
-            1600,
-            2000
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/kyoto/course/index.html"],
+          "distances": [1100, 1200, 1400, 1600, 2000],
           "starts": {
             "1600": "2コーナー奥の引き込み線からスタートする。"
           },
@@ -1014,19 +836,8 @@
           "straight": 403.7,
           "elevation": 4.3,
           "bias": "3コーナーに高低差4.3mの丘があり、4コーナーにかけて一気に下る。坂の頂上付近にあたる残り800m地点からペースが上がるレースが多い。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/kyoto/course/index.html"
-          ],
-          "distances": [
-            1400,
-            1600,
-            1800,
-            2000,
-            2200,
-            2400,
-            3000,
-            3200
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/kyoto/course/index.html"],
+          "distances": [1400, 1600, 1800, 2000, 2200, 2400, 3000, 3200],
           "starts": {
             "1600": "2コーナー奥の引き込み線からスタートする。",
             "1800": "2コーナー奥の引き込み線からスタートする。"
@@ -1072,18 +883,8 @@
           "straight": 329.1,
           "elevation": 3,
           "bias": "1周1607.6mは東京に次ぐ大きさだが、直線329.1mは阪神・新潟より短い。3コーナーの丘を下って平坦な直線に向かうため、上がりの時計が速い決着が目立つ。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/kyoto/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1100,
-            1200,
-            1400,
-            1800,
-            1900,
-            2600
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/kyoto/course/index.html"],
+          "distances": [1000, 1100, 1200, 1400, 1800, 1900, 2600],
           "starts": {
             "1400": "芝コースからスタートする。"
           },
@@ -1128,9 +929,7 @@
         }
       ],
       "handWritten": true,
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "hanshin",
@@ -1138,9 +937,7 @@
       "region": "central",
       "location": "兵庫県宝塚市駒の町",
       "order": 19,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/hanshin/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/hanshin/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -1150,17 +947,8 @@
           "straight": 356.5,
           "elevation": 1.9,
           "bias": "標準的なサイズ。残り800m地点から直線の半ばにかけて緩やかな下りが続き、ゴール前の急坂につながる。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/hanshin/course/index.html"
-          ],
-          "distances": [
-            1200,
-            1400,
-            2000,
-            2200,
-            3000,
-            3200
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/hanshin/course/index.html"],
+          "distances": [1200, 1400, 2000, 2200, 3000, 3200],
           "starts": {
             "1200": "外回り1600mと同じ発走地点。"
           },
@@ -1199,17 +987,8 @@
           "straight": 473.6,
           "elevation": 2.4,
           "bias": "1周2089mは右回りの競馬場で日本最長。直線473.6mは右回り最長で、全場3位。バックストレッチが長く3・4コーナーもゆったりしており、紛れが生じにくい。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/hanshin/course/index.html"
-          ],
-          "distances": [
-            1400,
-            1600,
-            1800,
-            2400,
-            2600,
-            3200
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/hanshin/course/index.html"],
+          "distances": [1400, 1600, 1800, 2400, 2600, 3200],
           "starts": {
             "1600": "内回り1200mと同じ発走地点で、向正面半ばからスタートする。"
           },
@@ -1248,16 +1027,8 @@
           "straight": 352.7,
           "elevation": 1.6,
           "bias": "残り900m地点から直線にかけて緩やかに下り、残り200m地点に高低差1.6mの上り坂がある。1周1517.6m・直線352.7mは標準サイズ。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/hanshin/course/index.html"
-          ],
-          "distances": [
-            1200,
-            1400,
-            1800,
-            2000,
-            2600
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/hanshin/course/index.html"],
+          "distances": [1200, 1400, 1800, 2000, 2600],
           "starts": {
             "1400": "芝コースからスタートする。",
             "2000": "芝コースからスタートする。"
@@ -1290,9 +1061,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "kokura",
@@ -1300,9 +1069,7 @@
       "region": "central",
       "location": "福岡県北九州市小倉南区",
       "order": 20,
-      "sources": [
-        "https://www.jra.go.jp/facilities/race/kokura/course/index.html"
-      ],
+      "sources": ["https://www.jra.go.jp/facilities/race/kokura/course/index.html"],
       "surfaces": [
         {
           "surface": "芝",
@@ -1312,17 +1079,8 @@
           "straight": 293,
           "elevation": 3,
           "bias": "1周1615.1mは福島に次いで小さく、直線293mに坂はない。2コーナーに小高い丘があり、高低差は3m。逃げ・先行タイプが明らかに優勢で、極端な追い込みはあまり決まらない。中長距離ではまくった馬の活躍も目立つ。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/kokura/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1200,
-            1700,
-            1800,
-            2000,
-            2600
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/kokura/course/index.html"],
+          "distances": [1000, 1200, 1700, 1800, 2000, 2600],
           "starts": {
             "1200": "2コーナー奥のポケット地点からスタートする。"
           },
@@ -1373,14 +1131,8 @@
           "straight": 291.3,
           "elevation": 2.9,
           "bias": "1周1445.4m・直線291.3mは福島とほぼ同じ。2コーナーの丘から4コーナーにかけて下り、残り400m地点から直線にかけて緩やかな上りが続く。極端な追い込みはあまり決まらず、逃げ・先行タイプが優勢。",
-          "sources": [
-            "https://www.jra.go.jp/facilities/race/kokura/course/index.html"
-          ],
-          "distances": [
-            1000,
-            1700,
-            2400
-          ],
+          "sources": ["https://www.jra.go.jp/facilities/race/kokura/course/index.html"],
+          "distances": [1000, 1700, 2400],
           "starts": {},
           "records": {
             "1000": {
@@ -1404,9 +1156,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.jra.go.jp/keiba/record/"
-      ]
+      "recordSources": ["https://www.jra.go.jp/keiba/record/"]
     },
     {
       "slug": "obihiro",
@@ -1432,16 +1182,12 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            200
-          ],
+          "distances": [200],
           "starts": {},
           "records": {}
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "monbetsu",
@@ -1467,16 +1213,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            1000,
-            1100,
-            1200,
-            1500,
-            1600,
-            1700,
-            1800,
-            2000
-          ],
+          "distances": [1000, 1100, 1200, 1500, 1600, 1700, 1800, 2000],
           "starts": {},
           "records": {
             "1000": {
@@ -1530,9 +1267,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "morioka",
@@ -1558,12 +1293,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            1000,
-            1600,
-            1700,
-            2400
-          ],
+          "distances": [1000, 1600, 1700, 2400],
           "starts": {},
           "records": {
             "1000": {
@@ -1604,16 +1334,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            1000,
-            1200,
-            1400,
-            1600,
-            1800,
-            2000,
-            2500,
-            3000
-          ],
+          "distances": [1000, 1200, 1400, 1600, 1800, 2000, 2500, 3000],
           "starts": {},
           "records": {
             "1000": {
@@ -1667,9 +1388,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "mizusawa",
@@ -1695,16 +1414,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            850,
-            1300,
-            1400,
-            1600,
-            1800,
-            1900,
-            2000,
-            2500
-          ],
+          "distances": [850, 1300, 1400, 1600, 1800, 1900, 2000, 2500],
           "starts": {},
           "records": {
             "850": {
@@ -1758,9 +1468,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "urawa",
@@ -1786,15 +1494,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            800,
-            1300,
-            1400,
-            1500,
-            1600,
-            1900,
-            2000
-          ],
+          "distances": [800, 1300, 1400, 1500, 1600, 1900, 2000],
           "starts": {},
           "records": {
             "800": {
@@ -1842,9 +1542,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "funabashi",
@@ -1870,16 +1568,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            1000,
-            1200,
-            1500,
-            1600,
-            1700,
-            1800,
-            2200,
-            2400
-          ],
+          "distances": [1000, 1200, 1500, 1600, 1700, 1800, 2200, 2400],
           "starts": {},
           "records": {
             "1000": {
@@ -1933,9 +1622,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "oi",
@@ -1961,19 +1648,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            1000,
-            1200,
-            1400,
-            1500,
-            1600,
-            1650,
-            1700,
-            1800,
-            2000,
-            2400,
-            2600
-          ],
+          "distances": [1000, 1200, 1400, 1500, 1600, 1650, 1700, 1800, 2000, 2400, 2600],
           "starts": {},
           "records": {
             "1000": {
@@ -2045,9 +1720,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "kawasaki",
@@ -2073,14 +1746,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            900,
-            1400,
-            1500,
-            1600,
-            2000,
-            2100
-          ],
+          "distances": [900, 1400, 1500, 1600, 2000, 2100],
           "starts": {},
           "records": {
             "900": {
@@ -2122,9 +1788,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "kanazawa",
@@ -2150,17 +1814,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            900,
-            1300,
-            1400,
-            1500,
-            1700,
-            1900,
-            2000,
-            2100,
-            2600
-          ],
+          "distances": [900, 1300, 1400, 1500, 1700, 1900, 2000, 2100, 2600],
           "starts": {},
           "records": {
             "900": {
@@ -2220,9 +1874,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "kasamatsu",
@@ -2248,14 +1900,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            800,
-            1400,
-            1600,
-            1800,
-            1900,
-            2500
-          ],
+          "distances": [800, 1400, 1600, 1800, 1900, 2500],
           "starts": {},
           "records": {
             "800": {
@@ -2297,9 +1942,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "nagoya",
@@ -2325,15 +1968,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            900,
-            920,
-            1400,
-            1500,
-            1700,
-            2000,
-            2100
-          ],
+          "distances": [900, 920, 1400, 1500, 1700, 2000, 2100],
           "starts": {},
           "records": {
             "900": {
@@ -2381,9 +2016,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "sonoda",
@@ -2409,14 +2042,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            820,
-            1230,
-            1400,
-            1700,
-            1870,
-            2400
-          ],
+          "distances": [820, 1230, 1400, 1700, 1870, 2400],
           "starts": {},
           "records": {
             "820": {
@@ -2458,9 +2084,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "himeji",
@@ -2486,13 +2110,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            800,
-            1400,
-            1500,
-            1800,
-            2000
-          ],
+          "distances": [800, 1400, 1500, 1800, 2000],
           "starts": {},
           "records": {
             "800": {
@@ -2528,9 +2146,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "kochi",
@@ -2556,15 +2172,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            800,
-            1300,
-            1400,
-            1600,
-            1800,
-            1900,
-            2400
-          ],
+          "distances": [800, 1300, 1400, 1600, 1800, 1900, 2400],
           "starts": {},
           "records": {
             "800": {
@@ -2612,9 +2220,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     },
     {
       "slug": "saga",
@@ -2640,16 +2246,7 @@
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
           ],
-          "distances": [
-            900,
-            1300,
-            1400,
-            1750,
-            1800,
-            1860,
-            2000,
-            2500
-          ],
+          "distances": [900, 1300, 1400, 1750, 1800, 1860, 2000, 2500],
           "starts": {},
           "records": {
             "900": {
@@ -2703,9 +2300,7 @@
           }
         }
       ],
-      "recordSources": [
-        "https://www.keiba.go.jp/guide/course_record/"
-      ]
+      "recordSources": ["https://www.keiba.go.jp/guide/course_record/"]
     }
   ],
   "overseas": [

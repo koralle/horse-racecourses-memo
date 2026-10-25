@@ -57,12 +57,7 @@ const hasActive = Boolean(indexIsCurrent) || hasActiveDescendant(items);
 const isOpen = Boolean(hasActive || collapsed === false || collapsed === undefined);
 ---
 
-<details
-  data-slot="sidebar-group"
-  open={isOpen || undefined}
-  class={className}
-  {...attrs}
->
+<details data-slot="sidebar-group" open={isOpen || undefined} class={className} {...attrs}>
   <SidebarGroupHeader label={label} hasActive={hasActive} badge={badge} icon={icon} />
 
   <ul>
@@ -91,9 +86,20 @@ const isOpen = Boolean(hasActive || collapsed === false || collapsed === undefin
             indexIsExternal={item.indexIsExternal}
           />
         ) : item.type === "external" ? (
-          <SidebarLink label={item.label} href={item.href} badge={item.badge} target="_blank" rel="noopener" />
+          <SidebarLink
+            label={item.label}
+            href={item.href}
+            badge={item.badge}
+            target="_blank"
+            rel="noopener"
+          />
         ) : (
-          <SidebarLink label={item.label} href={item.href} isCurrent={item.isCurrent} badge={item.badge} />
+          <SidebarLink
+            label={item.label}
+            href={item.href}
+            isCurrent={item.isCurrent}
+            badge={item.badge}
+          />
         )}
       </li>
     ))}

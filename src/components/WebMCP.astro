@@ -4,15 +4,18 @@ import { searchIndex } from "virtual:nimbus/config";
 ---
 
 {capabilities.search === "pagefind" && (
-  <meta name="nimbus-webmcp" content={JSON.stringify({
-    search: capabilities.search,
-    versions: capabilities.versions,
-    site: options.site,
-    title: options.title,
-    base: options.base,
-    bundle: searchIndex.bundle,
-    merge: searchIndex.merge,
-  })} />
+  <meta
+    name="nimbus-webmcp"
+    content={JSON.stringify({
+      search: capabilities.search,
+      versions: capabilities.versions,
+      site: options.site,
+      title: options.title,
+      base: options.base,
+      bundle: searchIndex.bundle,
+      merge: searchIndex.merge,
+    })}
+  />
 )}
 
 <script>

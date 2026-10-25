@@ -23,10 +23,10 @@ interface Props extends HTMLAttributes<"aside"> {
 const { type = "note", title, icon, class: className, ...attrs } = Astro.props;
 
 const defaults: Record<string, { label: string; icon: string }> = {
-  note:    { label: "Note",    icon: "ph:info" },
-  tip:     { label: "Tip",     icon: "ph:lightbulb" },
+  note: { label: "Note", icon: "ph:info" },
+  tip: { label: "Tip", icon: "ph:lightbulb" },
   caution: { label: "Caution", icon: "ph:warning" },
-  danger:  { label: "Danger",  icon: "ph:warning-circle" },
+  danger: { label: "Danger", icon: "ph:warning-circle" },
 };
 
 const d = defaults[type] ?? defaults.note;
@@ -42,8 +42,14 @@ const displayTitle = title ?? d.label;
   class={cn("aside-card flex items-start gap-3 rounded-lg px-4 py-3 my-6", className)}
   {...attrs}
 >
-  <span data-slot="aside-icon" class="aside-card-icon shrink-0 flex items-center h-6" aria-hidden="true">
-    <slot name="icon"><Icon name={icon ?? d.icon} class="size-4" /></slot>
+  <span
+    data-slot="aside-icon"
+    class="aside-card-icon shrink-0 flex items-center h-6"
+    aria-hidden="true"
+  >
+    <slot name="icon">
+      <Icon name={icon ?? d.icon} class="size-4" />
+    </slot>
   </span>
   <div class="flex min-w-0 flex-1 flex-col text-sm leading-6">
     <p data-slot="aside-title" class="aside-card-title m-0 font-semibold">
@@ -63,19 +69,45 @@ const displayTitle = title ?? d.label;
     border: 1px solid color-mix(in oklch, var(--_c) 25%, transparent);
     background: var(--_t);
   }
-  .aside-card[data-type="tip"]     { --_c: var(--nb-success); --_f: var(--nb-success-foreground); --_t: var(--nb-success-muted); }
-  .aside-card[data-type="caution"] { --_c: var(--nb-warning); --_f: var(--nb-warning-foreground); --_t: var(--nb-warning-muted); }
-  .aside-card[data-type="danger"]  { --_c: var(--nb-danger);  --_f: var(--nb-danger-foreground);  --_t: var(--nb-danger-muted); }
+  .aside-card[data-type="tip"] {
+    --_c: var(--nb-success);
+    --_f: var(--nb-success-foreground);
+    --_t: var(--nb-success-muted);
+  }
+  .aside-card[data-type="caution"] {
+    --_c: var(--nb-warning);
+    --_f: var(--nb-warning-foreground);
+    --_t: var(--nb-warning-muted);
+  }
+  .aside-card[data-type="danger"] {
+    --_c: var(--nb-danger);
+    --_f: var(--nb-danger-foreground);
+    --_t: var(--nb-danger-muted);
+  }
 
   /* Icon + title in the type's text colour; body text stays readable.
      --_c tints the border and inline code, --_f is for text. */
   .aside-card-icon,
-  .aside-card-title { color: var(--_f); }
-  .aside-card-body { color: var(--nb-foreground); }
+  .aside-card-title {
+    color: var(--_f);
+  }
+  .aside-card-body {
+    color: var(--nb-foreground);
+  }
 
-  .aside-card-body :global(p) { margin: 0; }
-  .aside-card-body :global(p + p) { margin-top: 0.5rem; }
-  .aside-card-body :global(a) { color: var(--nb-foreground); font-weight: 500; text-decoration: underline; text-decoration-color: var(--nb-border-strong); text-underline-offset: 4px; }
+  .aside-card-body :global(p) {
+    margin: 0;
+  }
+  .aside-card-body :global(p + p) {
+    margin-top: 0.5rem;
+  }
+  .aside-card-body :global(a) {
+    color: var(--nb-foreground);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: var(--nb-border-strong);
+    text-underline-offset: 4px;
+  }
 
   /* Inline code only — exclude code inside Expressive Code pre blocks */
   .aside-card-body :global(code:not(:where(pre *))) {
@@ -87,7 +119,10 @@ const displayTitle = title ?? d.label;
     padding: 0.125rem 0.3125rem;
     line-height: 1;
   }
-  .aside-card-body :global(strong) { font-weight: 600; color: var(--nb-foreground); }
+  .aside-card-body :global(strong) {
+    font-weight: 600;
+    color: var(--nb-foreground);
+  }
 
   /* Shiki code blocks inside Asides */
   .aside-card-body :global(.astro-code) {

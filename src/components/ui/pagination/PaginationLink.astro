@@ -35,8 +35,18 @@ const caption = label ?? (isNext ? "Next" : "Previous");
 >
   {!isNext && <PaginationKey>[</PaginationKey>}
   <span class="min-w-0">
-    <span data-slot="pagination-label" class="block text-[0.6875rem] leading-4 text-muted-foreground">{caption}</span>
-    <span data-slot="pagination-title" class="nb-pagination-title block text-sm leading-5 font-medium text-foreground"><slot /></span>
+    <span
+      data-slot="pagination-label"
+      class="block text-[0.6875rem] leading-4 text-muted-foreground"
+    >
+      {caption}
+    </span>
+    <span
+      data-slot="pagination-title"
+      class="nb-pagination-title block text-sm leading-5 font-medium text-foreground"
+    >
+      <slot />
+    </span>
   </span>
   {isNext && <PaginationKey>]</PaginationKey>}
 </a>
@@ -54,7 +64,9 @@ const caption = label ?? (isNext ? "Next" : "Previous");
     transition: opacity 200ms;
   }
   :global([data-slot="pagination-bar"]:hover) .nb-pagination-link + .nb-pagination-link::before,
-  :global([data-slot="pagination-bar"]:focus-within) .nb-pagination-link + .nb-pagination-link::before {
+  :global([data-slot="pagination-bar"]:focus-within)
+    .nb-pagination-link
+    + .nb-pagination-link::before {
     opacity: 0;
   }
 

@@ -27,13 +27,7 @@ const item = content.search(/\sdata-nb-tab-label\b/);
 const manual = list !== -1 && (item === -1 || list < item);
 ---
 
-<div
-  data-nb-tabs
-  data-slot="tabs"
-  data-nb-sync-key={syncKey}
-  class={cn(className)}
-  {...attrs}
->
+<div data-nb-tabs data-slot="tabs" data-nb-sync-key={syncKey} class={cn(className)} {...attrs}>
   {manual ? (
     <Fragment set:html={content} />
   ) : (

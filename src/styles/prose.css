@@ -141,7 +141,9 @@
   color: var(--nb-muted-foreground);
   text-decoration: none;
   opacity: 0;
-  transition: opacity 0.15s, color 0.15s;
+  transition:
+    opacity 0.15s,
+    color 0.15s;
 }
 
 .docs-content :where(h2[id], h3[id], h4[id]):hover .heading-anchor,
@@ -307,7 +309,9 @@
   color: var(--nb-foreground);
   background: var(--nb-card);
   border-radius: 0.3125rem;
-  box-shadow: 0 0 0 1px var(--nb-border-strong), 0 1px 0 1px var(--nb-border-strong);
+  box-shadow:
+    0 0 0 1px var(--nb-border-strong),
+    0 1px 0 1px var(--nb-border-strong);
   vertical-align: 0.0625rem;
 }
 

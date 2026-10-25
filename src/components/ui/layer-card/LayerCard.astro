@@ -19,7 +19,12 @@ interface Props extends HTMLAttributes<"div"> {
 }
 
 // A composing component can pass its own `data-slot` in place of this one.
-const { orientation = "vertical", class: className, "data-slot": slot = "layer-card", ...attrs } = Astro.props;
+const {
+  orientation = "vertical",
+  class: className,
+  "data-slot": slot = "layer-card",
+  ...attrs
+} = Astro.props;
 ---
 
 <div

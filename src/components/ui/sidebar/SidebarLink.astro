@@ -23,12 +23,7 @@ const hasLeading = Astro.slots.has("leading");
 const plain = !hasLeading && !badge;
 ---
 
-<a
-  href={resolvedHref}
-  aria-current={isCurrent ? "page" : undefined}
-  class={className}
-  {...attrs}
->
+<a href={resolvedHref} aria-current={isCurrent ? "page" : undefined} class={className} {...attrs}>
   {plain ? (
     label
   ) : (

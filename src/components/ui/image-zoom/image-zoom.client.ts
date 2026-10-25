@@ -48,7 +48,12 @@ mount("[data-nb-image-zoom]", (root) => {
       const trigger = img.closest<HTMLElement>(TRIGGER);
       const zoom = worthZooming(img);
       const target = img.parentElement instanceof HTMLPictureElement ? img.parentElement : img;
-      return { img, trigger, zoom, display: zoom && !trigger ? getComputedStyle(target).display : "" };
+      return {
+        img,
+        trigger,
+        zoom,
+        display: zoom && !trigger ? getComputedStyle(target).display : "",
+      };
     });
     for (const { img, trigger, zoom, display } of plan) {
       if (zoom && !trigger) wrap(img, display);

@@ -48,6 +48,8 @@ sidebar:
 | `pnpm preview` | ビルド結果をローカルで確認（静的プレビュー） |
 | `pnpm preview:worker` | `wrangler dev` で本番と同じ形で確認 |
 | `pnpm typecheck` | `astro check` |
+| `pnpm fmt` | oxfmt で整形（`src/content/` と `*.md` は対象外） |
+| `pnpm fmt:check` | 整形済みか確認（CI と同じ） |
 | `pnpm lint:docs` | 記事の lint（リンク・frontmatter・見出し）。ビルド後に実行する |
 | `pnpm lint:docs:fix` | 自動修正できる指摘を直す |
 | `pnpm deploy` | `astro check` → `astro build` → `lint:docs` → `wrangler deploy` |
@@ -70,6 +72,12 @@ pnpm deploy
 - `nimbus/bare-url` は無効。出典は URL をそのまま並べる方針のため。
 - ルールを足すときは `rules` に追記 → `pnpm build` → `pnpm lint:docs` で現状を確認してから直す。
 - `pnpm deploy` と GitHub Actions（`.github/workflows/lint.yml`）は build → lint の順で実行する。
+
+## 依存とフォーマット
+
+依存のバージョンは `pnpm-workspace.yaml` の `catalog` に完全固定で書き、`package.json` は `"catalog:"` だけを持つ。`catalogMode: strict` と `saveExact: true` を効かせてあるので、`pnpm add` も catalog 経由・固定バージョンで入る。上げるときは `pnpm-workspace.yaml` の該当行を書き換えて `pnpm install`。pnpm 自体のバージョンは `package.json` の `packageManager` で固定する（CI もこれを見る）。
+
+整形は oxfmt（`oxfmt.config.ts`）。`src/content/` の MDX とルートの `*.md` は本文なので対象外。`.astro` は `@astrojs/compiler-rs` 経由で整形する。
 
 ## ドメイン
 

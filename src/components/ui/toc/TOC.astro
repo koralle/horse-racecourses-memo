@@ -66,7 +66,12 @@ const { headings, class: className, ...attrs } = Astro.props;
                 style={`margin-inline-start: calc(${indent}rem - 0.125rem);`}
               >
                 <span class="col-start-1 row-start-1 [overflow-wrap:anywhere]">{h.text}</span>
-                <span aria-hidden="true" class="col-start-1 row-start-1 invisible font-medium [overflow-wrap:anywhere]">{h.text}</span>
+                <span
+                  aria-hidden="true"
+                  class="col-start-1 row-start-1 invisible font-medium [overflow-wrap:anywhere]"
+                >
+                  {h.text}
+                </span>
               </a>
               {goingShallower && (
                 <svg

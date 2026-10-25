@@ -26,8 +26,19 @@ const HEIGHT = 630;
 const LEFT = 80;
 const COLUMN = WIDTH - LEFT - 200;
 
-const TITLE: CardTypography = { fontFamily: "Inter", fontWeight: 500, letterSpacing: "-0.025em", lineHeight: 1.1, color: FOREGROUND };
-const SECTION: CardTypography = { fontFamily: "Inter", fontWeight: 400, lineHeight: 1.2, color: MUTED };
+const TITLE: CardTypography = {
+  fontFamily: "Inter",
+  fontWeight: 500,
+  letterSpacing: "-0.025em",
+  lineHeight: 1.1,
+  color: FOREGROUND,
+};
+const SECTION: CardTypography = {
+  fontFamily: "Inter",
+  fontWeight: 400,
+  lineHeight: 1.2,
+  color: MUTED,
+};
 
 // Fonts sit beside this file, not in public/, so they never ship. Read from
 // the project so `astro build --root <site>` finds them.
@@ -48,7 +59,11 @@ const renderer = await createCardRenderer({
 });
 
 type Style = Record<string, string | number>;
-const el = (type: string, style: Style, children?: CardNode | (CardNode | undefined)[] | string): CardNode => ({
+const el = (
+  type: string,
+  style: Style,
+  children?: CardNode | (CardNode | undefined)[] | string,
+): CardNode => ({
   type,
   props: { style, children },
 });
@@ -63,19 +78,41 @@ const Logo = (height: number): CardNode => ({
   },
 });
 
-async function card({ section, title, sizes }: { section?: string; title: string; sizes: number[] }): Promise<CardNode> {
+async function card({
+  section,
+  title,
+  sizes,
+}: {
+  section?: string;
+  title: string;
+  sizes: number[];
+}): Promise<CardNode> {
   const heading = await renderer.fit(title, { width: COLUMN, sizes, lines: 3, style: TITLE });
-  const label = section ? await renderer.fit(section, { width: COLUMN, sizes: [26], lines: 1, style: SECTION }) : undefined;
-  return el("div", { width: WIDTH, height: HEIGHT, display: "flex", position: "relative", background: BACKGROUND }, [
-    el("div", { position: "absolute", left: LEFT, top: 72, display: "flex" }, Logo(32)),
-    el("div", { position: "absolute", left: LEFT, right: LEFT, top: 148, height: 0, borderTop: `1.5px solid ${BORDER}` }),
-    // Hung from the hairline rather than set on the bottom margin: X crops
-    // the card to 2:1 and covers its foot with the link's domain.
-    el("div", { position: "absolute", left: LEFT, top: 204, display: "flex", flexDirection: "column" }, [
-      label && el("div", { display: "flex", marginBottom: 18 }, label.node),
-      heading.node,
-    ]),
-  ]);
+  const label = section
+    ? await renderer.fit(section, { width: COLUMN, sizes: [26], lines: 1, style: SECTION })
+    : undefined;
+  return el(
+    "div",
+    { width: WIDTH, height: HEIGHT, display: "flex", position: "relative", background: BACKGROUND },
+    [
+      el("div", { position: "absolute", left: LEFT, top: 72, display: "flex" }, Logo(32)),
+      el("div", {
+        position: "absolute",
+        left: LEFT,
+        right: LEFT,
+        top: 148,
+        height: 0,
+        borderTop: `1.5px solid ${BORDER}`,
+      }),
+      // Hung from the hairline rather than set on the bottom margin: X crops
+      // the card to 2:1 and covers its foot with the link's domain.
+      el(
+        "div",
+        { position: "absolute", left: LEFT, top: 204, display: "flex", flexDirection: "column" },
+        [label && el("div", { display: "flex", marginBottom: 18 }, label.node), heading.node],
+      ),
+    ],
+  );
 }
 
 /** A page's card. */

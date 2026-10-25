@@ -92,6 +92,12 @@ If the site replaces Sätteri with another processor, set `admonitions: false` a
 
 List installable items: `npx @cloudflare/nimbus-docs list`.
 
+## Dependencies and formatting
+
+- Versions live in `catalog` in `pnpm-workspace.yaml`, pinned exactly. `package.json` only says `"catalog:"`; `catalogMode: strict` and `saveExact: true` keep it that way. To upgrade, edit the version there and run `pnpm install` — never put a range in `package.json`.
+- pnpm itself is pinned by `packageManager` in `package.json`; CI installs that version.
+- `pnpm fmt` formats TS, Astro, JSON, CSS and YAML with oxfmt (`oxfmt.config.ts`). `src/content/**` and `*.md` are authored prose and excluded. Run `pnpm fmt:check` before finishing; CI runs it too.
+
 ## Sidebar
 
 The sidebar mirrors `src/content/docs/`. A folder becomes a group, and its `index.mdx` is the group's landing page; set `sidebar.group.label` there to rename the group. Within a group, `sidebar.order` sorts entries (lowest first, otherwise alphabetical), `sidebar.label` shortens a page's rail title, and `sidebar.hidden: true` builds a page without listing it.

@@ -34,7 +34,8 @@ const Title = href ? "p" : "h3";
   href={href}
   class={cn(
     "my-4 block rounded-lg bg-card p-5 shadow-sm ring ring-border",
-    href && "group text-inherit no-underline transition-[box-shadow] hover:shadow-default hover:ring-border-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
+    href &&
+      "group text-inherit no-underline transition-[box-shadow] hover:shadow-default hover:ring-border-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
     className,
   )}
   {...attrs}
@@ -45,11 +46,20 @@ const Title = href ? "p" : "h3";
     </div>
   )}
   {hasTitle && (
-    <Title data-slot="card-title" class={cn("m-0 text-base font-semibold leading-snug text-foreground", href && "transition-colors group-hover:text-primary")}>
+    <Title
+      data-slot="card-title"
+      class={cn(
+        "m-0 text-base font-semibold leading-snug text-foreground",
+        href && "transition-colors group-hover:text-primary",
+      )}
+    >
       <slot name="title">{title}</slot>
     </Title>
   )}
-  <div data-slot="card-content" class:list={["text-sm leading-normal text-muted-foreground", hasTitle && "mt-1.5"]}>
+  <div
+    data-slot="card-content"
+    class:list={["text-sm leading-normal text-muted-foreground", hasTitle && "mt-1.5"]}
+  >
     <slot />
   </div>
 </Tag>

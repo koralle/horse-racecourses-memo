@@ -46,8 +46,10 @@ function validate(venue) {
   for (const s of venue.surfaces) {
     const id = `${where} ${s.surface}${s.course ?? ""}`;
     if (!SURFACE_SLUG[s.surface]) fail(`${id}: surface は 芝 / ダート のみ`);
-    if (s.course !== null && !COURSE_SLUG[s.course]) fail(`${id}: course は 内回り / 外回り / 直線 / null`);
-    if (!Array.isArray(s.sources) || !s.sources.every(isUrl)) fail(`${id}: sources に http(s) URL が必要`);
+    if (s.course !== null && !COURSE_SLUG[s.course])
+      fail(`${id}: course は 内回り / 外回り / 直線 / null`);
+    if (!Array.isArray(s.sources) || !s.sources.every(isUrl))
+      fail(`${id}: sources に http(s) URL が必要`);
     if (!Array.isArray(s.distances) || s.distances.length === 0) fail(`${id}: distances が空`);
     for (const d of s.distances) {
       if (!Number.isInteger(d)) fail(`${id}: distance ${d} が整数でない`);
@@ -90,11 +92,7 @@ function page(venue, surface, distance, order) {
       ].join("\n")
     : "コースレコードは未確認。";
   const sources = [
-    ...new Set([
-      ...surface.sources,
-      ...venue.sources,
-      ...(rec ? (venue.recordSources ?? []) : []),
-    ]),
+    ...new Set([...surface.sources, ...venue.sources, ...(rec ? (venue.recordSources ?? []) : [])]),
   ]
     .map((u) => `- ${u}`)
     .join("\n");
@@ -145,7 +143,8 @@ function validateOverseas(venue) {
   if (!Array.isArray(venue.races) || venue.races.length === 0) fail(`${venue.name}: races が空`);
   for (const r of venue.races) {
     if (!r.name) fail(`${venue.name}: 競走名が無い`);
-    if (!["芝", "ダート", "障害"].includes(r.surface)) fail(`${venue.name} ${r.name}: surface が不正`);
+    if (!["芝", "ダート", "障害"].includes(r.surface))
+      fail(`${venue.name} ${r.name}: surface が不正`);
     if (!Number.isInteger(r.distance)) fail(`${venue.name} ${r.name}: distance が整数でない`);
   }
 }
@@ -305,7 +304,10 @@ for (const venue of data.venues) {
       order += 1;
       const name = `${SURFACE_SLUG[surface.surface]}-${distance}${suffix}`;
       await writeFile(join(dir, `${name}.mdx`), page(venue, surface, distance, order), "utf8");
-      links.push({ title: titleOf(venue, surface, distance), href: `/racecourses/${venue.slug}/${name}/` });
+      links.push({
+        title: titleOf(venue, surface, distance),
+        href: `/racecourses/${venue.slug}/${name}/`,
+      });
       written += 1;
     }
   }
@@ -397,4 +399,6 @@ if (overseas.length > 0) {
 await writeFile(join(OUT, "index.mdx"), courseIndex(data.venues, overseas), "utf8");
 written += 1;
 
-console.log(`✓ ${data.venues.length} 場 / ${overseas.length} 海外会場 / ${written} ページを生成 → src/content/docs/racecourses/`);
+console.log(
+  `✓ ${data.venues.length} 場 / ${overseas.length} 海外会場 / ${written} ページを生成 → src/content/docs/racecourses/`,
+);

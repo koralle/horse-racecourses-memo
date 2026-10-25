@@ -17,9 +17,7 @@ interface SidebarState {
 }
 
 function groupsOf(root: HTMLElement): HTMLDetailsElement[] {
-  return Array.from(
-    root.querySelectorAll<HTMLDetailsElement>("details"),
-  );
+  return Array.from(root.querySelectorAll<HTMLDetailsElement>("details"));
 }
 
 function initSidebar(root: HTMLElement): () => void {
@@ -46,7 +44,9 @@ function initFilter(root: HTMLElement): (() => void) | null {
   // SidebarFilter is rendered *next to* Sidebar (sibling), so also look in
   // the parent — preserves the existing layout where filter sits above.
   const inputElement =
-    input ?? root.parentElement?.querySelector<HTMLInputElement>("[data-nb-sidebar-filter-input]") ?? null;
+    input ??
+    root.parentElement?.querySelector<HTMLInputElement>("[data-nb-sidebar-filter-input]") ??
+    null;
   if (!inputElement) return null;
 
   function handleInput() {
@@ -111,7 +111,8 @@ function applyFilter(root: HTMLElement, query: string): void {
     if (!text.includes(query)) return;
     group.removeAttribute("data-nb-sidebar-hidden");
     openGroup(group);
-    group.querySelectorAll<HTMLElement>("li > a, details")
+    group
+      .querySelectorAll<HTMLElement>("li > a, details")
       .forEach((child) => child.removeAttribute("data-nb-sidebar-hidden"));
   });
 }
@@ -240,9 +241,7 @@ function initPersistence(root: HTMLElement): (() => void) | null {
     const active = document.activeElement as HTMLElement | null;
     if (
       active &&
-      (active.tagName === "INPUT" ||
-        active.tagName === "TEXTAREA" ||
-        active.isContentEditable)
+      (active.tagName === "INPUT" || active.tagName === "TEXTAREA" || active.isContentEditable)
     ) {
       return;
     }

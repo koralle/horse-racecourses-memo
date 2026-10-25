@@ -23,8 +23,7 @@ const tabs = getTabs(type, pkg, { args, dev, comment });
 const locals = Astro.locals as typeof Astro.locals & {
   __nbCounters?: Map<string, number>;
 };
-const counters =
-  locals.__nbCounters ?? (locals.__nbCounters = new Map<string, number>());
+const counters = locals.__nbCounters ?? (locals.__nbCounters = new Map<string, number>());
 const n = (counters.get("package-managers") ?? 0) + 1;
 counters.set("package-managers", n);
 const uid =
@@ -61,9 +60,11 @@ const uid =
           tabs.forEach(function (t, i) {
             t.setAttribute("aria-selected", String(i === idx));
           });
-          (card.querySelectorAll("[data-nb-pm-panel]") as NodeListOf<HTMLElement>).forEach(function (p, i) {
-            p.hidden = i !== idx;
-          });
+          (card.querySelectorAll("[data-nb-pm-panel]") as NodeListOf<HTMLElement>).forEach(
+            function (p, i) {
+              p.hidden = i !== idx;
+            },
+          );
         }
       },
     );
@@ -105,7 +106,10 @@ const uid =
           class="relative overflow-hidden rounded-lg bg-card text-inherit ring ring-border"
         >
           <div class="flex items-stretch">
-            <pre tabindex="0" class="my-0 min-w-0 grow overflow-x-auto border-0 bg-transparent px-4 py-3 text-sm leading-6 whitespace-pre font-mono text-foreground"><code data-nb-pm-code>{commentPrefix && <span class="text-muted-foreground">{commentPrefix}</span>}<span class="nb-pm-cmd">{codeFirst}</span><span class="nb-pm-args">{codeRest}</span></code></pre>
+            <pre
+              tabindex="0"
+              class="my-0 min-w-0 grow overflow-x-auto border-0 bg-transparent px-4 py-3 text-sm leading-6 whitespace-pre font-mono text-foreground"
+            ><code data-nb-pm-code>{commentPrefix && <span class="text-muted-foreground">{commentPrefix}</span>}<span class="nb-pm-cmd">{codeFirst}</span><span class="nb-pm-args">{codeRest}</span></code></pre>
             <button
               type="button"
               data-nb-pm-copy
@@ -121,9 +125,15 @@ const uid =
     })}
     <nb-pm-restore style="display:contents"></nb-pm-restore>
   </LayerCard>
-  <template data-nb-pm-icon-copy><Icon name="ph:copy" class="w-[18px] h-[18px]" /></template>
-  <template data-nb-pm-icon-check><Icon name="ph:check" class="w-[18px] h-[18px]" /></template>
-  <template data-nb-pm-icon-fail><Icon name="ph:x" class="w-[18px] h-[18px]" /></template>
+  <template data-nb-pm-icon-copy>
+    <Icon name="ph:copy" class="w-[18px] h-[18px]" />
+  </template>
+  <template data-nb-pm-icon-check>
+    <Icon name="ph:check" class="w-[18px] h-[18px]" />
+  </template>
+  <template data-nb-pm-icon-fail>
+    <Icon name="ph:x" class="w-[18px] h-[18px]" />
+  </template>
 </div>
 
 <script>
@@ -133,8 +143,16 @@ const uid =
 <style>
   /* The command in the same colours the site's code blocks give a shell
      command (github-light / github-dark): the program, then its arguments. */
-  .nb-pm-cmd { color: #6f42c1; }
-  .nb-pm-args { color: #032f62; }
-  :global([data-mode="dark"]) .nb-pm-cmd { color: #b392f0; }
-  :global([data-mode="dark"]) .nb-pm-args { color: #9ecbff; }
+  .nb-pm-cmd {
+    color: #6f42c1;
+  }
+  .nb-pm-args {
+    color: #032f62;
+  }
+  :global([data-mode="dark"]) .nb-pm-cmd {
+    color: #b392f0;
+  }
+  :global([data-mode="dark"]) .nb-pm-args {
+    color: #9ecbff;
+  }
 </style>

@@ -59,12 +59,20 @@ const next = composed ? undefined : prevNext?.next;
       ) : (
         <>
           {prev && (
-            <PaginationLink rel="prev" href={withBase(prev.href, import.meta.env.BASE_URL)} label={prevLabel}>
+            <PaginationLink
+              rel="prev"
+              href={withBase(prev.href, import.meta.env.BASE_URL)}
+              label={prevLabel}
+            >
               {prev.label}
             </PaginationLink>
           )}
           {next && (
-            <PaginationLink rel="next" href={withBase(next.href, import.meta.env.BASE_URL)} label={nextLabel}>
+            <PaginationLink
+              rel="next"
+              href={withBase(next.href, import.meta.env.BASE_URL)}
+              label={nextLabel}
+            >
               {next.label}
             </PaginationLink>
           )}
