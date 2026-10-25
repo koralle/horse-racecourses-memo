@@ -366,9 +366,9 @@
           "course": "直線",
           "circumference": null,
           "width": null,
-          "straight": null,
+          "straight": 1000,
           "elevation": null,
-          "bias": "日本唯一の直線コース。外枠優勢の傾向がある。",
+          "bias": "日本唯一の直線コース。1,000m すべてが直線で、外枠優勢の傾向がある。",
           "sources": [
             "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
           ],
@@ -618,7 +618,9 @@
             2100,
             2400
           ],
-          "starts": {},
+          "starts": {
+            "1600": "芝コースからスタートする。"
+          },
           "records": {
             "1300": {
               "time": "1:16.1",
@@ -782,7 +784,9 @@
             2400,
             2500
           ],
-          "starts": {},
+          "starts": {
+            "1200": "芝コースからスタートする。"
+          },
           "records": {
             "1000": {
               "time": "0:58.4",
@@ -915,7 +919,9 @@
             1900,
             2500
           ],
-          "starts": {},
+          "starts": {
+            "1400": "芝コースからスタートする。"
+          },
           "records": {
             "1200": {
               "time": "1:09.1",
@@ -1421,7 +1427,7 @@
           "width": "21",
           "straight": 200,
           "elevation": "第1障害1.0m／第2障害1.6m",
-          "bias": "直線200mのコースに高さ1.0mの第1障害と1.6mの第2障害がある。ソリの最後尾がゴールラインを通過した瞬間にゴール。",
+          "bias": "全長200mの直線コースに高さ1.0mの第1障害と1.6mの第2障害がある。ソリの最後尾がゴールラインを通過した瞬間にゴール。",
           "sources": [
             "https://www.keiba.go.jp/guide/course/",
             "https://www.keiba.go.jp/guide/course_record/"
