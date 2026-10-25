@@ -32,6 +32,7 @@ catalog:
   "@tailwindcss/vite": 4.3.3
   astro: 7.4.2
   clsx: 2.1.1
+  knip: 6.43.0
   oxfmt: 0.74.0
   pagefind: 1.5.2
   satori: 0.26.0

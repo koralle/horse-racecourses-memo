@@ -97,6 +97,8 @@ List installable items: `npx @cloudflare/nimbus-docs list`.
 - Versions live in `catalog` in `pnpm-workspace.yaml`, pinned exactly. `package.json` only says `"catalog:"`; `catalogMode: strict` and `saveExact: true` keep it that way. To upgrade, edit the version there and run `pnpm install` — never put a range in `package.json`.
 - pnpm itself is pinned by `packageManager` in `package.json`; CI installs that version.
 - `pnpm fmt` formats TS, Astro, JSON, CSS and YAML with oxfmt (`oxfmt.config.ts`). `src/content/**` and `*.md` are authored prose and excluded. Run `pnpm fmt:check` before finishing; CI runs it too.
+- `pnpm knip` reports unused files, dependencies and exports; CI fails on it. Two things are ignored in `knip.config.ts` with a reason: dependencies no `import` reaches (pagefind, `@iconify-json/ph`, `@astrojs/language-server`), and exports/types of `src/components/ui/**`, whose `index.ts` barrels re-export the whole registry API and come back on `add --overwrite`. Add a reason there before adding a package that knip can't trace.
+- `tsconfig.json` extends `astro/tsconfigs/strictest` with `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes` and `noPropertyAccessFromIndexSignature` switched back off: the registry components and starter files trip on them all over (DOM `dataset`, optional props in generated content types), and hand-patching files `add --overwrite` replaces is a losing loop. Everything else strictest adds is on. `pnpm typecheck` (`astro check`) is the gate — CI runs it; `astro build` alone does not type-check.
 
 ## Sidebar
 

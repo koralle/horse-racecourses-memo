@@ -35,6 +35,17 @@ jobs:
         shell: bash
         run: pnpm run fmt:check
 
+      # 未使用のファイル・依存・export を検出する。ビルドに依存しないので
+      # build より先に走らせ、早く落とす。
+      - name: Knip
+        shell: bash
+        run: pnpm run knip --reporter github-actions
+
+      # tsconfig.json の厳しめ設定はここでしか効かない（build は型検査しない）。
+      - name: Typecheck
+        shell: bash
+        run: pnpm run typecheck
+
       # `lint` はビルドが書く `.nimbus/routes.json` と `.nimbus/lint.json` を
       # 読むので、build と lint は同じジョブに置く。
       - name: Build
