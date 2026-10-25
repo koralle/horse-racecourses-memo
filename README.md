@@ -48,8 +48,9 @@ sidebar:
 | `pnpm preview` | ビルド結果をローカルで確認（静的プレビュー） |
 | `pnpm preview:worker` | `wrangler dev` で本番と同じ形で確認 |
 | `pnpm typecheck` | `astro check` |
-| `pnpm lint:docs` | リンク・frontmatter・見出しの検査（`--fix` で自動修正） |
-| `pnpm deploy` | `astro check` → `astro build` → `wrangler deploy` |
+| `pnpm lint:docs` | 記事の lint（リンク・frontmatter・見出し）。ビルド後に実行する |
+| `pnpm lint:docs:fix` | 自動修正できる指摘を直す |
+| `pnpm deploy` | `astro check` → `astro build` → `lint:docs` → `wrangler deploy` |
 
 ## デプロイ
 
@@ -59,6 +60,16 @@ pnpm deploy
 ```
 
 `wrangler` が Worker の URL（`https://horse-racecourses-memo.<subdomain>.workers.dev`）を出力する。デプロイ前に中身を確認したいときは `pnpm exec wrangler deploy --dry-run`。
+
+## Lint
+
+`pnpm lint:docs` は `astro.config.ts` の `rules` で有効にした記事ルールを実行する。リンク検査はビルドが書く `.nimbus/routes.json` を見るので、**先に `pnpm build`**（`.nimbus/` は git 管理外）。
+
+- `error`: 壊れたリンク・画像、`description` 欠落、frontmatter 不正など。1 件でもあれば終了コード 1。
+- `warn`: 見出しの句読点、強調・リストの記法など。表示されるが失敗にはしない。
+- `nimbus/bare-url` は無効。出典は URL をそのまま並べる方針のため。
+- ルールを足すときは `rules` に追記 → `pnpm build` → `pnpm lint:docs` で現状を確認してから直す。
+- `pnpm deploy` と GitHub Actions（`.github/workflows/lint.yml`）は build → lint の順で実行する。
 
 ## ドメイン
 

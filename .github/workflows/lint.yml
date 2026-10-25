@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+# 同じ PR の古い実行は取り消す（push が続いたときに最新の内容だけを検査する）。
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  docs:
+    name: Build and lint docs
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      # pnpm / Node / ストアのキャッシュ / `pnpm install --frozen-lockfile` を
+      # まとめて行う。バージョンはこのファイルで固定する。
+      - name: Setup
+        uses: pnpm/setup@fa36a5ef7dcdefc3a7cb25655c122e00cf6e636e # v3.1.2
+        with:
+          version: 12.14.0
+          runtime: node@24
+          cache: true
+          require-lockfile: true
+
+      # `lint` はビルドが書く `.nimbus/routes.json` と `.nimbus/lint.json` を
+      # 読むので、build と lint は同じジョブに置く。
+      - name: Build
+        shell: bash
+        run: pnpm run build
+
+      - name: Lint
+        shell: bash
+        run: pnpm run lint:docs

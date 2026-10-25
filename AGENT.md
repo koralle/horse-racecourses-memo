@@ -60,6 +60,17 @@ Rules:
 - **Icons use Nimbus's `Icon` + Phosphor.** `<Icon name="ph:<glyph>" class="w-4 h-4" />` from `@cloudflare/nimbus-docs/components/Icon.astro`. Glyphs: [phosphoricons.com](https://phosphoricons.com).
 - **Don't remove `<AgentDirective />` from `BaseLayout.astro`.** It points agents at `/llms.txt`.
 
+### Lint
+
+`pnpm lint:docs` runs the authoring rules enabled in the `rules` option of `nimbus(...)` in `astro.config.ts`. `astro build` writes those severities to `.nimbus/lint.json` (gitignored) and the route list `.nimbus/routes.json` that link checking reads, so **build first** — on a fresh clone, lint exits `1` and asks for a build. `pnpm lint:docs:fix` applies the safe auto-fixes.
+
+- `error` fails the run: broken `internal-link` / `redirected-link` / `image-ref`, missing `description`, invalid frontmatter, heading and code-block structure.
+- `warn` is reported but never fails: heading punctuation, emphasis and list markup, code-block prompt prefixes.
+- `nimbus/bare-url` is deliberately off — every 出典 list cites bare URLs. Preview it with `pnpm exec nimbus-docs lint --rule nimbus/bare-url` before turning it on.
+- `collections.partials.rules` overrides the top level for fragments: no description, no single H1, no fixed heading level.
+- Per-file escapes stay greppable: frontmatter `nimbusDisableRules: ["nimbus/internal-link"]`, or `{/* nimbus-rule-disable-next-line nimbus/bare-url */}` above one line.
+- `pnpm deploy` and `.github/workflows/lint.yml` both run build then lint, so links are checked against the routes the build actually produced. To add a rule: put it in `rules`, rebuild, run lint, then fix what it finds.
+
 ## Adding things
 
 | Goal | Action |

@@ -48,15 +48,42 @@ export default defineConfig({
 
   integrations: [
     nimbus(nimbusConfig, {
-      // Authoring rules are opt-in by design — your repo, your taste. The
-      // two below are the load-bearing pair: frontmatter has to validate
-      // against the content schema for the page to render properly, and
-      // broken internal links are 404s for your readers. Add the others
-      // (heading hierarchy, code-block language, style, etc.) when you're
-      // ready to enforce them — see `nimbus-docs lint --help`.
+      // Authoring rules are opt-in by design, so severities live here. Build
+      // validators (frontmatter schema, MDX syntax, route collisions) run on
+      // their own and gate the build; these run only when `lint` asks for
+      // them. `.nimbus/lint.json` is written by `astro build` and is what the
+      // CLI reads — build before linting.
       rules: {
+        // `error`: the page is broken for a reader or an agent. Fails lint.
         "nimbus/frontmatter-shape": "error",
+        "nimbus/description-required": "error",
         "nimbus/internal-link": "error",
+        "nimbus/redirected-link": "error",
+        "nimbus/image-ref": "error",
+        "nimbus/no-self-host-url": "error",
+        "nimbus/single-h1": "error",
+        "nimbus/heading-hierarchy": "error",
+        "nimbus/duplicate-heading-text": "error",
+        "nimbus/code-block-lang": "error",
+        // `warn`: typography and consistency. Loud, but doesn't fail the run.
+        "nimbus/code-block-prompt-prefix": "warn",
+        "nimbus/heading-punctuation": "warn",
+        "nimbus/emphasis-style": "warn",
+        "nimbus/list-marker-style": "warn",
+        // `nimbus/bare-url` stays off: every 出典 section lists its sources as
+        // bare URLs on purpose. Preview what it wants with
+        // `nimbus-docs lint --rule nimbus/bare-url` before enabling it.
+      },
+      collections: {
+        // Partials are fragments inlined into another page, so they carry no
+        // description and no fixed heading level to check.
+        partials: {
+          rules: {
+            "nimbus/description-required": "off",
+            "nimbus/single-h1": "off",
+            "nimbus/heading-hierarchy": "off",
+          },
+        },
       },
       markdown: {
         // Wrap wide tables so they scroll instead of overflowing the page
