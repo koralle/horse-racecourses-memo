@@ -13,7 +13,8 @@
     "predeploy": "astro check && astro build",
     "deploy": "wrangler deploy",
     "prepreview:worker": "astro build",
-    "preview:worker": "wrangler dev"
+    "preview:worker": "wrangler dev",
+    "gen:courses": "node scripts/gen-courses.mjs"
   },
   "dependencies": {
     "@cloudflare/nimbus-docs": "^0.19.0",

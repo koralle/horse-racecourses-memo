@@ -1,0 +1,3091 @@
+{
+  "$comment": "競馬場・コースの一次データ。scripts/gen-courses.mjs が MDX を生成する。sources は必須。数値は JRA コース紹介ページ（直線距離・高低差・一周距離・幅員・発走距離）に基づく。裏取りできない項目は null（ページでは「未確認」）。",
+  "venues": [
+    {
+      "slug": "sapporo",
+      "name": "札幌競馬場",
+      "region": "central",
+      "location": "北海道札幌市中央区",
+      "order": 11,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/sapporo/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": null,
+          "circumference": "1640.9",
+          "width": "25〜27",
+          "straight": 266.1,
+          "elevation": 0.7,
+          "bias": "ほぼ平坦で、コーナーの占める割合が大きく円形に近い。直線は266.1mと短く、後方一気の追い込みは苦戦傾向。半面、捲りの割合が他場より高い。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/sapporo/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1200,
+            1500,
+            1800,
+            2000,
+            2600
+          ],
+          "starts": {}
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1487",
+          "width": "20",
+          "straight": 264.3,
+          "elevation": 0.9,
+          "bias": "レイアウトは芝コースとほぼ同じ。1周1487mは地方場のダートでは中京に次ぐ大きさだが、直線は264.3mと短い。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/sapporo/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1700,
+            2400
+          ],
+          "starts": {}
+        }
+      ]
+    },
+    {
+      "slug": "hakodate",
+      "name": "函館競馬場",
+      "region": "central",
+      "location": "北海道函館市駒場町",
+      "order": 12,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/hakodate/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": null,
+          "circumference": "1626.6",
+          "width": "29",
+          "straight": 262.1,
+          "elevation": 3.5,
+          "bias": "直線262.1mは全場で最も短く、逃げ・先行タイプの活躍が目立つ。後方一気の追い込みは苦戦。高低差3.5mで、2〜4コーナーにかけて上り勾配が続く。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/hakodate/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1200,
+            1700,
+            1800,
+            2000,
+            2600
+          ],
+          "starts": {
+            "1200": "2コーナーポケットからスタート。序盤の先行争いはほぼ上り勾配で展開する。",
+            "2600": "向正面半ばにスタート地点があり、スタートからゴールまでに上り勾配を2回走る。"
+          }
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1475.8",
+          "width": "20",
+          "straight": 260.3,
+          "elevation": 3.5,
+          "bias": "直線260.3mは全場で最も短い。逃げ・先行タイプが優勢。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/hakodate/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1700,
+            2400
+          ],
+          "starts": {
+            "1000": "序盤の先行争いはほぼ丸々、上り勾配で繰り広げられる。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fukushima",
+      "name": "福島競馬場",
+      "region": "central",
+      "location": "福島県福島市松浪町",
+      "order": 13,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/fukushima/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": null,
+          "circumference": "1600",
+          "width": "25〜27",
+          "straight": 292,
+          "elevation": 1.9,
+          "bias": "1周1600mはJRA全場で最もコンパクト。直線292mはローカル場として標準的だが差しもまずまず決まる。残り170m付近から残り50m付近までは高低差1.2mの上り勾配。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/fukushima/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1200,
+            1700,
+            1800,
+            2000,
+            2600
+          ],
+          "starts": {}
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1444.6",
+          "width": "20〜25",
+          "straight": 295.7,
+          "elevation": 2.1,
+          "bias": "水準以上に逃げ馬の活躍が目立つ。起伏の構成は芝コースとほぼ同じ。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/fukushima/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1150,
+            1700,
+            2400
+          ],
+          "starts": {
+            "1150": "芝コースからスタートする。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "niigata",
+      "name": "新潟競馬場",
+      "region": "central",
+      "location": "新潟県新潟市北区",
+      "order": 14,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": "直線",
+          "circumference": null,
+          "width": null,
+          "straight": null,
+          "elevation": null,
+          "bias": "日本唯一の直線コース。外枠優勢の傾向がある。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
+          ],
+          "distances": [
+            1000
+          ],
+          "starts": {}
+        },
+        {
+          "surface": "芝",
+          "course": "内回り",
+          "circumference": "1623",
+          "width": "25",
+          "straight": 358.7,
+          "elevation": 0.8,
+          "bias": "直線358.7mは中山（310m）よりかなり長い。差し馬が水準以上の成績を残している。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
+          ],
+          "distances": [
+            1200,
+            1400,
+            2000,
+            2200,
+            2400
+          ],
+          "starts": {}
+        },
+        {
+          "surface": "芝",
+          "course": "外回り",
+          "circumference": "2223",
+          "width": "25",
+          "straight": 658.7,
+          "elevation": 2.2,
+          "bias": "1周2223m・直線658.7mはともに日本最長。序盤から中盤は緩やかなペースで流れ、直線の末脚比べになりやすい。3〜4コーナーに高低差1.6mの下りがあり、自然と勢いがつく。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
+          ],
+          "distances": [
+            1400,
+            1600,
+            1800,
+            2000,
+            3000,
+            3200
+          ],
+          "starts": {}
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1472.5",
+          "width": "20",
+          "straight": 353.9,
+          "elevation": 0.6,
+          "bias": "直線353.9mは全国で3番目の長さ。逃げ・先行タイプが優勢。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/niigata/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1200,
+            1700,
+            1800,
+            2500
+          ],
+          "starts": {
+            "1200": "芝コースからスタートする。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tokyo",
+      "name": "東京競馬場",
+      "region": "central",
+      "location": "東京都府中市日吉町",
+      "order": 15,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/tokyo/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": null,
+          "circumference": "2083.1",
+          "width": "31〜41",
+          "straight": 525.9,
+          "elevation": 2.7,
+          "bias": "直線525.9mは日本一。1コーナーから向正面半ばにかけて高低差1.9mの長い下り、3コーナー手前に高低差1.5mの上り、直線残り460〜300mに2つめの上りがある。カーブがゆったりして紛れが少なく、差し・追い込み馬の活躍が他場以上に目立つ。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/tokyo/course/index.html"
+          ],
+          "distances": [
+            1400,
+            1600,
+            1800,
+            2000,
+            2300,
+            2400,
+            2500,
+            2600,
+            3400
+          ],
+          "starts": {
+            "1600": "2コーナー付近に発走地点がある。"
+          }
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1899",
+          "width": "25",
+          "straight": 501.6,
+          "elevation": 2.5,
+          "bias": "1周1899m・直線501.6mは日本一のスケール。直線の上り坂は高低差2.4mで芝コースを上回る。直線の末脚比べになりやすく、差し・追い込み馬が目立つ。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/tokyo/course/index.html"
+          ],
+          "distances": [
+            1200,
+            1300,
+            1400,
+            1600,
+            2100,
+            2400
+          ],
+          "starts": {}
+        }
+      ],
+      "handWritten": true
+    },
+    {
+      "slug": "nakayama",
+      "name": "中山競馬場",
+      "region": "central",
+      "location": "千葉県船橋市古作",
+      "order": 16,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/nakayama/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": "内回り",
+          "circumference": "1667.1",
+          "width": "20〜32",
+          "straight": 310,
+          "elevation": 5.3,
+          "bias": "高低差5.3mはJRA全10場で最大。ゴール前の急坂は残り180〜70m、高低差2.2m・最大勾配2.24%で10場最大。2・3コーナーがタイトな小回りコース。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/nakayama/course/index.html"
+          ],
+          "distances": [
+            1800,
+            2000,
+            2500,
+            3200,
+            3600
+          ],
+          "starts": {
+            "2500": "発走地点は外回りコース上に設けられている。"
+          }
+        },
+        {
+          "surface": "芝",
+          "course": "外回り",
+          "circumference": "1839.7",
+          "width": "24〜32",
+          "straight": 310,
+          "elevation": 5.3,
+          "bias": "1周1839.7m。直線は内回りと同じ310mで、4大場（東京・中山・京都・阪神）の中では最も短い。起伏は内回りと同じ構成。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/nakayama/course/index.html"
+          ],
+          "distances": [
+            1200,
+            1600,
+            2200,
+            2600,
+            3200,
+            4000
+          ],
+          "starts": {}
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1493",
+          "width": "20〜25",
+          "straight": 308,
+          "elevation": 4.5,
+          "bias": "起伏の構成は芝コースとほぼ同じ。1周1493m・直線308mで、全体のサイズはローカル場を少し大きくした程度。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/nakayama/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1200,
+            1700,
+            1800,
+            2400,
+            2500
+          ],
+          "starts": {}
+        }
+      ]
+    },
+    {
+      "slug": "chukyo",
+      "name": "中京競馬場",
+      "region": "central",
+      "location": "愛知県豊明市間米町",
+      "order": 17,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/chukyo/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": null,
+          "circumference": "1705.9",
+          "width": "28〜30",
+          "straight": 412.5,
+          "elevation": 3.5,
+          "bias": "直線412.5mは京都の外回りより長い。直線に向いてすぐの上り坂は勾配約2%・高低差約2mで、阪神や東京より急。芝・ダートともに差し・追い込み馬が水準以上に活躍する。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/chukyo/course/index.html"
+          ],
+          "distances": [
+            1200,
+            1300,
+            1400,
+            1600,
+            2000,
+            2200,
+            3000
+          ],
+          "starts": {}
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1530",
+          "width": "25",
+          "straight": 410.7,
+          "elevation": 3.4,
+          "bias": "1周1530mは東京・京都に次いで3位、直線410.7mは東京に次いで長い。差し・追い込み馬が水準以上に活躍する。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/chukyo/course/index.html"
+          ],
+          "distances": [
+            1200,
+            1400,
+            1800,
+            1900,
+            2500
+          ],
+          "starts": {}
+        }
+      ]
+    },
+    {
+      "slug": "kyoto",
+      "name": "京都競馬場",
+      "region": "central",
+      "location": "京都府京都市伏見区",
+      "order": 18,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/kyoto/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": "内回り",
+          "circumference": "1782.8",
+          "width": "27〜38",
+          "straight": 328.4,
+          "elevation": 3.1,
+          "bias": "外回りよりコンパクトな造りで、逃げ・先行タイプが優勢。3・4コーナーのカーブもタイト。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/kyoto/course/index.html"
+          ],
+          "distances": [
+            1100,
+            1200,
+            1400,
+            1600,
+            2000
+          ],
+          "starts": {
+            "1600": "2コーナー奥の引き込み線からスタートする。"
+          }
+        },
+        {
+          "surface": "芝",
+          "course": "外回り",
+          "circumference": "1894.3",
+          "width": "24〜38",
+          "straight": 403.7,
+          "elevation": 4.3,
+          "bias": "3コーナーに高低差4.3mの丘があり、4コーナーにかけて一気に下る。坂の頂上付近にあたる残り800m地点からペースが上がるレースが多い。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/kyoto/course/index.html"
+          ],
+          "distances": [
+            1400,
+            1600,
+            1800,
+            2000,
+            2200,
+            2400,
+            3000,
+            3200
+          ],
+          "starts": {
+            "1600": "2コーナー奥の引き込み線からスタートする。",
+            "1800": "2コーナー奥の引き込み線からスタートする。"
+          }
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1607.6",
+          "width": "25",
+          "straight": 329.1,
+          "elevation": 3,
+          "bias": "1周1607.6mは東京に次ぐ大きさだが、直線329.1mは阪神・新潟より短い。3コーナーの丘を下って平坦な直線に向かうため、上がりの時計が速い決着が目立つ。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/kyoto/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1100,
+            1200,
+            1400,
+            1800,
+            1900,
+            2600
+          ],
+          "starts": {
+            "1400": "芝コースからスタートする。"
+          }
+        }
+      ],
+      "handWritten": true
+    },
+    {
+      "slug": "hanshin",
+      "name": "阪神競馬場",
+      "region": "central",
+      "location": "兵庫県宝塚市駒の町",
+      "order": 19,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/hanshin/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": "内回り",
+          "circumference": "1689",
+          "width": "24〜28",
+          "straight": 356.5,
+          "elevation": 1.9,
+          "bias": "標準的なサイズ。残り800m地点から直線の半ばにかけて緩やかな下りが続き、ゴール前の急坂につながる。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/hanshin/course/index.html"
+          ],
+          "distances": [
+            1200,
+            1400,
+            2000,
+            2200,
+            3000,
+            3200
+          ],
+          "starts": {
+            "1200": "外回り1600mと同じ発走地点。"
+          }
+        },
+        {
+          "surface": "芝",
+          "course": "外回り",
+          "circumference": "2089",
+          "width": "24〜29",
+          "straight": 473.6,
+          "elevation": 2.4,
+          "bias": "1周2089mは右回りの競馬場で日本最長。直線473.6mは右回り最長で、全場3位。バックストレッチが長く3・4コーナーもゆったりしており、紛れが生じにくい。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/hanshin/course/index.html"
+          ],
+          "distances": [
+            1400,
+            1600,
+            1800,
+            2400,
+            2600,
+            3200
+          ],
+          "starts": {
+            "1600": "内回り1200mと同じ発走地点で、向正面半ばからスタートする。"
+          }
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1517.6",
+          "width": "22〜25",
+          "straight": 352.7,
+          "elevation": 1.6,
+          "bias": "残り900m地点から直線にかけて緩やかに下り、残り200m地点に高低差1.6mの上り坂がある。1周1517.6m・直線352.7mは標準サイズ。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/hanshin/course/index.html"
+          ],
+          "distances": [
+            1200,
+            1400,
+            1800,
+            2000,
+            2600
+          ],
+          "starts": {
+            "1400": "芝コースからスタートする。",
+            "2000": "芝コースからスタートする。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kokura",
+      "name": "小倉競馬場",
+      "region": "central",
+      "location": "福岡県北九州市小倉南区",
+      "order": 20,
+      "sources": [
+        "https://www.jra.go.jp/facilities/race/kokura/course/index.html"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": null,
+          "circumference": "1615.1",
+          "width": "30",
+          "straight": 293,
+          "elevation": 3,
+          "bias": "1周1615.1mは福島に次いで小さく、直線293mに坂はない。2コーナーに小高い丘があり、高低差は3m。逃げ・先行タイプが明らかに優勢で、極端な追い込みはあまり決まらない。中長距離ではまくった馬の活躍も目立つ。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/kokura/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1200,
+            1700,
+            1800,
+            2000,
+            2600
+          ],
+          "starts": {
+            "1200": "2コーナー奥のポケット地点からスタートする。"
+          }
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1445.4",
+          "width": "24",
+          "straight": 291.3,
+          "elevation": 2.9,
+          "bias": "1周1445.4m・直線291.3mは福島とほぼ同じ。2コーナーの丘から4コーナーにかけて下り、残り400m地点から直線にかけて緩やかな上りが続く。極端な追い込みはあまり決まらず、逃げ・先行タイプが優勢。",
+          "sources": [
+            "https://www.jra.go.jp/facilities/race/kokura/course/index.html"
+          ],
+          "distances": [
+            1000,
+            1700,
+            2400
+          ],
+          "starts": {}
+        }
+      ]
+    },
+    {
+      "slug": "obihiro",
+      "name": "帯広競馬場",
+      "region": "local",
+      "location": null,
+      "order": 31,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": null,
+          "width": "21",
+          "straight": null,
+          "elevation": "第1障害1.0m／第2障害1.6m",
+          "bias": "直線200mのコースに高さ1.0mの第1障害と1.6mの第2障害がある。ソリの最後尾がゴールラインを通過した瞬間にゴール。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            200
+          ],
+          "starts": {},
+          "records": {}
+        }
+      ]
+    },
+    {
+      "slug": "monbetsu",
+      "name": "門別競馬場",
+      "region": "local",
+      "location": null,
+      "order": 32,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": null,
+          "width": "25",
+          "straight": "400m（ゴールまで330m）",
+          "elevation": "1.54",
+          "bias": "1周1600m右回り。外回り1600m・内回り1376mの2コースがある。直線が長くカーブが緩く、追い込み馬でも届く。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            1000,
+            1100,
+            1200,
+            1500,
+            1600,
+            1700,
+            1800,
+            2000
+          ],
+          "starts": {},
+          "records": {
+            "1000": {
+              "time": "0:58.4",
+              "horse": "アザワク",
+              "jockey": "小野楓馬オノフウマ",
+              "date": "2020/07/02"
+            },
+            "1100": {
+              "time": "1:05.6",
+              "horse": "ベストグリーン",
+              "jockey": "小野楓馬オノフウマ",
+              "date": "2025/04/17"
+            },
+            "1200": {
+              "time": "1:09.4",
+              "horse": "ニシケンモノノフ",
+              "jockey": "横山典弘ヨコヤマノリヒロ",
+              "date": "2017/06/08"
+            },
+            "1500": {
+              "time": "1:34.4",
+              "horse": "センコーファースト",
+              "jockey": "石川倭イシカワヤマト",
+              "date": "2019/10/10"
+            },
+            "1600": {
+              "time": "1:39.1",
+              "horse": "マイネルシスネロス",
+              "jockey": "桑村真明クワムラマサアキ",
+              "date": "2021/07/07"
+            },
+            "1700": {
+              "time": "1:44.9",
+              "horse": "エイシンイッパツ",
+              "jockey": "坂下秀樹サカシタヒデキ",
+              "date": "2011/09/21"
+            },
+            "1800": {
+              "time": "1:51.4",
+              "horse": "バルーン",
+              "jockey": "井上俊彦イノウエトシヒコ",
+              "date": "2013/10/17"
+            },
+            "2000": {
+              "time": "2:02.2",
+              "horse": "スマートファルコン",
+              "jockey": "岩田康誠イワタヤスナリ",
+              "date": "2009/08/13"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "morioka",
+      "name": "盛岡競馬場",
+      "region": "local",
+      "location": null,
+      "order": 33,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "芝",
+          "course": null,
+          "circumference": "1400",
+          "width": "25",
+          "straight": "400m（ゴールまで300m）",
+          "elevation": "4.6",
+          "bias": "地方競馬場で芝コースを併設するのは盛岡だけ。左回りで、芝・ダートとも直線は約400m、芝の高低差は4.6m。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            1000,
+            1600,
+            1700,
+            2400
+          ],
+          "starts": {},
+          "records": {
+            "1000": {
+              "time": "0:57.2",
+              "horse": "カルーナブルガリス",
+              "jockey": "山本政聡ヤマモトマサトシ",
+              "date": "2023/07/11"
+            },
+            "1600": {
+              "time": "1:36.2",
+              "horse": "ロイヤルスター",
+              "jockey": "小林俊彦コバヤシトシヒコ",
+              "date": "1999/06/06"
+            },
+            "1700": {
+              "time": "1:43.6",
+              "horse": "ウン",
+              "jockey": "本田正重ホンダマサシゲ",
+              "date": "2022/07/10"
+            },
+            "2400": {
+              "time": "2:28.5",
+              "horse": "アトミックフォース",
+              "jockey": "山本聡哉ヤマモトトシヤ",
+              "date": "2022/07/31"
+            }
+          }
+        },
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1600",
+          "width": "25",
+          "straight": "400m（ゴールまで300m）",
+          "elevation": "4.4",
+          "bias": "1周1600mのダート。左回りで、芝・ダートとも直線は約400m、高低差は約4mと地方競馬では珍しく起伏が大きい。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            1000,
+            1200,
+            1400,
+            1600,
+            1800,
+            2000,
+            2500,
+            3000
+          ],
+          "starts": {},
+          "records": {
+            "1000": {
+              "time": "0:58.1",
+              "horse": "マッドシェリー",
+              "jockey": "神尾香澄カミオカスミ",
+              "date": "2023/10/22"
+            },
+            "1200": {
+              "time": "1:08.5",
+              "horse": "マテラスカイ",
+              "jockey": "武豊タケユタカ",
+              "date": "2020/08/10"
+            },
+            "1400": {
+              "time": "1:23.4",
+              "horse": "タイセイブラスト",
+              "jockey": "高松亮タカマツリョウ",
+              "date": "2020/10/26"
+            },
+            "1600": {
+              "time": "1:32.7",
+              "horse": "アルクトス",
+              "jockey": "田邊裕信タナベヒロノブ",
+              "date": "2020/10/12"
+            },
+            "1800": {
+              "time": "1:49.3",
+              "horse": "サンビスタ",
+              "jockey": "岩田康誠イワタヤスナリ",
+              "date": "2014/11/03"
+            },
+            "2000": {
+              "time": "2:00.8",
+              "horse": "コパノリッキー",
+              "jockey": "田邊裕信タナベヒロノブ",
+              "date": "2014/11/03"
+            },
+            "2500": {
+              "time": "2:39.6",
+              "horse": "バンケーティング",
+              "jockey": "菅原勲スガワライサオ",
+              "date": "2002/11/24"
+            },
+            "3000": {
+              "time": "3:20.6",
+              "horse": "センリオー",
+              "jockey": "板垣吉則イタガキヨシノリ",
+              "date": "2007/10/22"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mizusawa",
+      "name": "水沢競馬場",
+      "region": "local",
+      "location": null,
+      "order": 34,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1200",
+          "width": "20",
+          "straight": "317m（ゴールまで245m）",
+          "elevation": "0（平坦）",
+          "bias": "1周1200mの右回り。高低差0mの平坦なコースで、起伏に富む盛岡とは対照的。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            850,
+            1300,
+            1400,
+            1600,
+            1800,
+            1900,
+            2000,
+            2500
+          ],
+          "starts": {},
+          "records": {
+            "850": {
+              "time": "0:49.1",
+              "horse": "トンデコパ",
+              "jockey": "村上忍ムラカミシノブ",
+              "date": "2021/12/05"
+            },
+            "1300": {
+              "time": "1:19.0",
+              "horse": "ルチルクォーツ",
+              "jockey": "陶文峰トウブンホウ",
+              "date": "2024/06/25"
+            },
+            "1400": {
+              "time": "1:24.3",
+              "horse": "プライドキム",
+              "jockey": "川島正太郎カワシマショウタロウ",
+              "date": "2008/08/18"
+            },
+            "1600": {
+              "time": "1:38.5",
+              "horse": "テンショウボス",
+              "jockey": "小林俊彦コバヤシトシヒコ",
+              "date": "2007/11/12"
+            },
+            "1800": {
+              "time": "1:53.1",
+              "horse": "エイシンイッパツ",
+              "jockey": "板垣吉則イタガキヨシノリ",
+              "date": "2009/12/07"
+            },
+            "1900": {
+              "time": "1:58.8",
+              "horse": "シャイニングサヤカ",
+              "jockey": "岩橋勇二イワハシユウジ",
+              "date": "2013/09/02"
+            },
+            "2000": {
+              "time": "2:04.2",
+              "horse": "リケアカプチーノ",
+              "jockey": "吉原寛人ヨシハラヒロト",
+              "date": "2026/06/21"
+            },
+            "2500": {
+              "time": "2:41.8",
+              "horse": "ナムラタイタン",
+              "jockey": "坂口裕一サカグチユウイチ",
+              "date": "2014/12/07"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "urawa",
+      "name": "浦和競馬場",
+      "region": "local",
+      "location": null,
+      "order": 35,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1200",
+          "width": "16〜21.5",
+          "straight": "300m（ゴールまで220m）",
+          "elevation": "0（平坦）",
+          "bias": "1周1200mの左回り。小回りで直線も短く、タイトなレースが展開される。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            800,
+            1300,
+            1400,
+            1500,
+            1600,
+            1900,
+            2000
+          ],
+          "starts": {},
+          "records": {
+            "800": {
+              "time": "0:45.5",
+              "horse": "トッキーホレット",
+              "jockey": "中山遥人ナカヤマハルヒト",
+              "date": "2025/06/25"
+            },
+            "1300": {
+              "time": "1:20.6",
+              "horse": "グランプリクン",
+              "jockey": "石崎隆之イシザキタカユキ",
+              "date": "1996/10/15"
+            },
+            "1400": {
+              "time": "1:23.2",
+              "horse": "シャマル",
+              "jockey": "川須栄彦カワスハルヒコ",
+              "date": "2025/06/25"
+            },
+            "1500": {
+              "time": "1:31.9",
+              "horse": "ラブリービュー",
+              "jockey": "本田正重ホンダマサシゲ",
+              "date": "2025/06/26"
+            },
+            "1600": {
+              "time": "1:37.9",
+              "horse": "インテリパワー",
+              "jockey": "張田京ハリタタカシ",
+              "date": "1999/04/20"
+            },
+            "1900": {
+              "time": "1:57.0",
+              "horse": "タイコウレジェンド",
+              "jockey": "的場文男マトバフミオ",
+              "date": "2001/05/03"
+            },
+            "2000": {
+              "time": "2:04.1",
+              "horse": "キョウトシチー",
+              "jockey": "松永幹夫マツナガミキオ",
+              "date": "1997/12/03"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "funabashi",
+      "name": "船橋競馬場",
+      "region": "local",
+      "location": null,
+      "order": 36,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": null,
+          "width": "外25／内20",
+          "straight": "362m（ゴールまで308m）",
+          "elevation": "0（平坦）",
+          "bias": "1周1400mの左回り。外回り1400m・内回り1250mの2コースがあり、コーナーの内外に高低差を付けたスパイラルカーブを採用するのは南関東4場で唯一。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            1000,
+            1200,
+            1500,
+            1600,
+            1700,
+            1800,
+            2200,
+            2400
+          ],
+          "starts": {},
+          "records": {
+            "1000": {
+              "time": "0:57.5",
+              "horse": "スパロービート",
+              "jockey": "戸崎圭太トサキケイタ",
+              "date": "2008/12/11"
+            },
+            "1200": {
+              "time": "1:11.5",
+              "horse": "スカーレットオペラ",
+              "jockey": "桑島孝春クワジマタカハル",
+              "date": "2008/07/22"
+            },
+            "1500": {
+              "time": "1:32.2",
+              "horse": "ダイジユボーイ",
+              "jockey": "松代眞マツシロマコト",
+              "date": "1979/07/20"
+            },
+            "1600": {
+              "time": "1:35.4",
+              "horse": "アブクマポーロ",
+              "jockey": "石崎隆之イシザキタカユキ",
+              "date": "1998/05/27"
+            },
+            "1700": {
+              "time": "1:43.3",
+              "horse": "マークシート",
+              "jockey": "松代眞マツシロマコト",
+              "date": "1982/08/01"
+            },
+            "1800": {
+              "time": "1:47.8",
+              "horse": "ボンネビルレコード",
+              "jockey": "的場文男マトバフミオ",
+              "date": "2008/09/23"
+            },
+            "2200": {
+              "time": "2:22.5",
+              "horse": "ヒルノバーゼル",
+              "jockey": "澤田龍哉サワダリョウヤ",
+              "date": "2021/12/02"
+            },
+            "2400": {
+              "time": "2:29.6",
+              "horse": "カネツフルーヴ",
+              "jockey": "松永幹夫マツナガミキオ",
+              "date": "2003/03/26"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "oi",
+      "name": "大井競馬場",
+      "region": "local",
+      "location": null,
+      "order": 37,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": null,
+          "width": "25",
+          "straight": "外486m（右・ゴールまで386m／左・300m）／内386m（ゴールまで286m）",
+          "elevation": "0（平坦）",
+          "bias": "1周1600m。現在において世界で唯一の左右両回りコース。外回り1600m（左右）・内回り1400m（右）の2コースがある。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            1000,
+            1200,
+            1400,
+            1500,
+            1600,
+            1650,
+            1700,
+            1800,
+            2000,
+            2400,
+            2600
+          ],
+          "starts": {},
+          "records": {
+            "1000": {
+              "time": "0:57.7",
+              "horse": "ノアヴィグラス",
+              "jockey": "藤本現暉フジモトゲンキ",
+              "date": "2023/06/29"
+            },
+            "1200": {
+              "time": "1:10.0",
+              "horse": "ドンフランキー",
+              "jockey": "池添謙一イケゾエケンイチ",
+              "date": "2023/10/04"
+            },
+            "1400": {
+              "time": "1:23.8",
+              "horse": "アガリスピード",
+              "jockey": "赤間清松アカマキヨマツ",
+              "date": "1977/08/30"
+            },
+            "1500": {
+              "time": "1:31.5",
+              "horse": "キクマツオー",
+              "jockey": "佐々木竹見ササキタケミ",
+              "date": "1980/06/14"
+            },
+            "1600": {
+              "time": "1:37.2",
+              "horse": "アジュディミツオー",
+              "jockey": "内田博幸ウチダヒロユキ",
+              "date": "2006/04/12"
+            },
+            "1650": {
+              "time": "1:42.3",
+              "horse": "ロンコーネ",
+              "jockey": "笹川翼ササガワツバサ",
+              "date": "2023/09/22"
+            },
+            "1700": {
+              "time": "1:43.2",
+              "horse": "ムツヒカリ",
+              "jockey": "赤嶺本浩アカミネモトヒロ",
+              "date": "1977/07/12"
+            },
+            "1800": {
+              "time": "1:49.6",
+              "horse": "ミラクルレジェンド",
+              "jockey": "岩田康誠イワタヤスナリ",
+              "date": "2011/11/03"
+            },
+            "2000": {
+              "time": "2:00.4",
+              "horse": "スマートファルコン",
+              "jockey": "武豊タケユタカ",
+              "date": "2010/12/29"
+            },
+            "2400": {
+              "time": "2:29.7",
+              "horse": "グツドボーイ",
+              "jockey": "高橋三郎タカハシサブロウ",
+              "date": "1977/11/04"
+            },
+            "2600": {
+              "time": "2:42.8",
+              "horse": "アグネスチカラ",
+              "jockey": "高柳恒男タカヤナギツネオ",
+              "date": "1977/05/27"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kawasaki",
+      "name": "川崎競馬場",
+      "region": "local",
+      "location": null,
+      "order": 38,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1200",
+          "width": "25",
+          "straight": "400m（ゴールまで300m）",
+          "elevation": "0（平坦）",
+          "bias": "1周1200mの左回り。直線300mでコーナーがタイト。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            900,
+            1400,
+            1500,
+            1600,
+            2000,
+            2100
+          ],
+          "starts": {},
+          "records": {
+            "900": {
+              "time": "0:51.5",
+              "horse": "ユーリカ",
+              "jockey": "脇田創ワキタハジメ",
+              "date": "2014/06/12"
+            },
+            "1400": {
+              "time": "1:26.6",
+              "horse": "タイセイレジェンド",
+              "jockey": "内田博幸ウチダヒロユキ",
+              "date": "2012/11/05"
+            },
+            "1500": {
+              "time": "1:31.5",
+              "horse": "ハバナマティーニ",
+              "jockey": "杉村一樹スギムラカズキ",
+              "date": "2012/06/12"
+            },
+            "1600": {
+              "time": "1:37.9",
+              "horse": "ロードライジング",
+              "jockey": "内田博幸ウチダヒロユキ",
+              "date": "2006/05/17"
+            },
+            "2000": {
+              "time": "2:04.8",
+              "horse": "マルイチダイオー",
+              "jockey": "角田次男ツノダツギオ",
+              "date": "1975/06/26"
+            },
+            "2100": {
+              "time": "2:10.7",
+              "horse": "スマートファルコン",
+              "jockey": "武豊タケユタカ",
+              "date": "2012/01/25"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kanazawa",
+      "name": "金沢競馬場",
+      "region": "local",
+      "location": null,
+      "order": 39,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1200",
+          "width": "20",
+          "straight": "286m（ゴールまで236m）",
+          "elevation": "0（平坦）",
+          "bias": "1周1200mの右回り。4つのコーナーすべてにポケットが設けられている。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            900,
+            1300,
+            1400,
+            1500,
+            1700,
+            1900,
+            2000,
+            2100,
+            2600
+          ],
+          "starts": {},
+          "records": {
+            "900": {
+              "time": "0:53.6",
+              "horse": "ニュータウンガール",
+              "jockey": "岡部誠オカベマコト",
+              "date": "2021/06/29"
+            },
+            "1300": {
+              "time": "1:21.9",
+              "horse": "メイショウヘミング",
+              "jockey": "畑中信司ハタナカシンジ",
+              "date": "2012/06/19"
+            },
+            "1400": {
+              "time": "1:24.6",
+              "horse": "レッドルゼル",
+              "jockey": "川田将雅カワダユウガ",
+              "date": "2021/11/03"
+            },
+            "1500": {
+              "time": "1:32.1",
+              "horse": "テオレーマ",
+              "jockey": "川田将雅カワダユウガ",
+              "date": "2021/11/03"
+            },
+            "1700": {
+              "time": "1:45.9",
+              "horse": "プレシオーソ",
+              "jockey": "加藤翔馬カトウショウマ",
+              "date": "2025/07/01"
+            },
+            "1900": {
+              "time": "1:59.8",
+              "horse": "マルケンホープ",
+              "jockey": "大瀬戸豊オオセトユタカ",
+              "date": "1983/07/03"
+            },
+            "2000": {
+              "time": "2:04.9",
+              "horse": "ヒロイックテイル",
+              "jockey": "吉原寛人ヨシハラヒロト",
+              "date": "2024/08/25"
+            },
+            "2100": {
+              "time": "2:10.3",
+              "horse": "メイショウカズサ",
+              "jockey": "川田将雅カワダユウガ",
+              "date": "2021/09/22"
+            },
+            "2600": {
+              "time": "2:49.5",
+              "horse": "アンタンスルフレ",
+              "jockey": "岡部誠オカベマコト",
+              "date": "2024/11/03"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kasamatsu",
+      "name": "笠松競馬場",
+      "region": "local",
+      "location": null,
+      "order": 40,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1100",
+          "width": "20",
+          "straight": "238m（ゴールまで201m）",
+          "elevation": "1.92",
+          "bias": "1周1100mの小回りで、コーナーを使っての追い込みが難しい。砂は極めて良好で脚抜き・水はけが良い。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            800,
+            1400,
+            1600,
+            1800,
+            1900,
+            2500
+          ],
+          "starts": {},
+          "records": {
+            "800": {
+              "time": "0:47.4",
+              "horse": "シルバ",
+              "jockey": "藤原幹生フジワラミキオ",
+              "date": "2021/09/10"
+            },
+            "1400": {
+              "time": "1:23.6",
+              "horse": "ラブバレット",
+              "jockey": "山本聡哉ヤマモトトシヤ",
+              "date": "2016/11/24"
+            },
+            "1600": {
+              "time": "1:38.4",
+              "horse": "チアズキョウト",
+              "jockey": "坂口重政サカグチシゲマサ",
+              "date": "1995/04/30"
+            },
+            "1800": {
+              "time": "1:52.9",
+              "horse": "ボールドマツクス",
+              "jockey": "伊藤強一イトウキヨウイチ",
+              "date": "1984/06/17"
+            },
+            "1900": {
+              "time": "2:00.3",
+              "horse": "ボールドマツクス",
+              "jockey": "伊藤強一イトウキヨウイチ",
+              "date": "1985/04/07"
+            },
+            "2500": {
+              "time": "2:39.5",
+              "horse": "カネツフルーヴ",
+              "jockey": "松永幹夫マツナガミキオ",
+              "date": "2003/04/29"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "nagoya",
+      "name": "名古屋競馬場",
+      "region": "local",
+      "location": null,
+      "order": 41,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1180",
+          "width": "30",
+          "straight": "300m（ゴールまで240m）",
+          "elevation": "0（平坦）",
+          "bias": "1周1180mのダート。第3・第4コーナーは入口から出口にかけて半径が小さくなるスパイラルカーブ。ホームストレッチは約240m。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            900,
+            920,
+            1400,
+            1500,
+            1700,
+            2000,
+            2100
+          ],
+          "starts": {},
+          "records": {
+            "900": {
+              "time": "0:54.2",
+              "horse": "ソレーヌ",
+              "jockey": "今井貴大イマイタカヒロ",
+              "date": "2026/09/18"
+            },
+            "920": {
+              "time": "0:53.9",
+              "horse": "セブンカラーズ",
+              "jockey": "山田祥雄ヤマダサチオ",
+              "date": "2026/04/23"
+            },
+            "1400": {
+              "time": "1:26.2",
+              "horse": "ゴールドボンド",
+              "jockey": "丸野勝虎マルノカツト",
+              "date": "2026/10/1"
+            },
+            "1500": {
+              "time": "1:31.1",
+              "horse": "ウィルソンテソーロ",
+              "jockey": "川田将雅カワダユウガ",
+              "date": "2023/05/02"
+            },
+            "1700": {
+              "time": "1:46.3",
+              "horse": "キャリックアリード",
+              "jockey": "御神本訓史ミカモトノリフミ",
+              "date": "2024/09/05"
+            },
+            "2000": {
+              "time": "2:06.2",
+              "horse": "アピーリングルック",
+              "jockey": "松山弘平マツヤマコウヘイ",
+              "date": "2025/12/24"
+            },
+            "2100": {
+              "time": "2:10.9",
+              "horse": "ノットゥルノ",
+              "jockey": "武豊タケユタカ",
+              "date": "2024/05/06"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sonoda",
+      "name": "園田競馬場",
+      "region": "local",
+      "location": null,
+      "order": 42,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1051",
+          "width": "20〜24",
+          "straight": "241m（ゴールまで213m）",
+          "elevation": "1.23",
+          "bias": "1周1051mで、日本の競馬場としては1周が短い小回りコース。向正面から3コーナーにかけて高低差1.2mの登り坂がある。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            820,
+            1230,
+            1400,
+            1700,
+            1870,
+            2400
+          ],
+          "starts": {},
+          "records": {
+            "820": {
+              "time": "0:48.1",
+              "horse": "エイシンマロニエ",
+              "jockey": "川原正一カワハラショウイチ",
+              "date": "2012/06/21"
+            },
+            "1230": {
+              "time": "1:15.5",
+              "horse": "ベストタイザン",
+              "jockey": "下原理シモハラオサム",
+              "date": "2008/05/29"
+            },
+            "1400": {
+              "time": "1:25.3",
+              "horse": "マイタイザン",
+              "jockey": "杉浦健太スギウラケンタ",
+              "date": "2020/03/11"
+            },
+            "1700": {
+              "time": "1:46.3",
+              "horse": "トロットヒーロー",
+              "jockey": "岩田康誠イワタヤスナリ",
+              "date": "2003/08/14"
+            },
+            "1870": {
+              "time": "1:56.7",
+              "horse": "ヴァーミリアン",
+              "jockey": "武豊タケユタカ",
+              "date": "2008/11/03"
+            },
+            "2400": {
+              "time": "2:35.6",
+              "horse": "マルヨフェニックス",
+              "jockey": "尾島徹オジマトオル",
+              "date": "2011/03/09"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "himeji",
+      "name": "姫路競馬場",
+      "region": "local",
+      "location": null,
+      "order": 43,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1200",
+          "width": "20〜25",
+          "straight": "350m（ゴールまで230m）",
+          "elevation": "0（平坦）",
+          "bias": "1周1200mの右回り。直線230m・高低差0mで、園田とは違った展開になる。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            800,
+            1400,
+            1500,
+            1800,
+            2000
+          ],
+          "starts": {},
+          "records": {
+            "800": {
+              "time": "0:48.5",
+              "horse": "ホクザンフィールド",
+              "jockey": "清水貴行シミズタカユキ",
+              "date": "2001/07/25"
+            },
+            "1400": {
+              "time": "1:26.3",
+              "horse": "エーシンビーセルズ",
+              "jockey": "田中学タナカマナブ",
+              "date": "2012/07/05"
+            },
+            "1500": {
+              "time": "1:33.0",
+              "horse": "モエレトレジャー",
+              "jockey": "永島太郎ナガシマタロウ",
+              "date": "2007/07/11"
+            },
+            "1800": {
+              "time": "1:55.7",
+              "horse": "ベストラン",
+              "jockey": "松平幸秀マツヒラユキヒデ",
+              "date": "2012/07/12"
+            },
+            "2000": {
+              "time": "2:11.1",
+              "horse": "レッドストーン",
+              "jockey": "倉地学クラチマナブ",
+              "date": "2006/03/01"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kochi",
+      "name": "高知競馬場",
+      "region": "local",
+      "location": null,
+      "order": 44,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1100",
+          "width": "27〜22",
+          "straight": "230m（ゴールまで200m）",
+          "elevation": "1.58",
+          "bias": "1周1100mの右回り。3・4コーナーに比べ1・2コーナーの半径が小さい。内ラチ沿いの砂が深く、内を開けてレースが行われる傾向がある。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            800,
+            1300,
+            1400,
+            1600,
+            1800,
+            1900,
+            2400
+          ],
+          "starts": {},
+          "records": {
+            "800": {
+              "time": "0:47.6",
+              "horse": "コンドルヒデオ",
+              "jockey": "永森大智ナガモリタイチ",
+              "date": "2019/07/20"
+            },
+            "1300": {
+              "time": "1:20.2",
+              "horse": "メモリーキャッチ",
+              "jockey": "赤岡修次アカオカシュウジ",
+              "date": "1997/07/12"
+            },
+            "1400": {
+              "time": "1:26.0",
+              "horse": "テセウスフリーゼ",
+              "jockey": "的場均マトバヒトシ",
+              "date": "1999/03/22"
+            },
+            "1600": {
+              "time": "1:40.9",
+              "horse": "デュークウェイン",
+              "jockey": "倉兼育康クラカネイクヤス",
+              "date": "2000/01/15"
+            },
+            "1800": {
+              "time": "1:54.9",
+              "horse": "マルカイッキュウ",
+              "jockey": "徳留康豊トクドメヤストヨ",
+              "date": "1997/11/17"
+            },
+            "1900": {
+              "time": "2:01.7",
+              "horse": "ブリッジテイオー",
+              "jockey": "中越豊光ナカゴシトヨミツ",
+              "date": "1999/02/28"
+            },
+            "2400": {
+              "time": "2:36.9",
+              "horse": "マルカイッキュウ",
+              "jockey": "鷹野宏史タカノヒロフミ",
+              "date": "1998/01/04"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "saga",
+      "name": "佐賀競馬場",
+      "region": "local",
+      "location": null,
+      "order": 45,
+      "sources": [
+        "https://www.keiba.go.jp/guide/course/",
+        "https://www.keiba.go.jp/guide/course_record/"
+      ],
+      "surfaces": [
+        {
+          "surface": "ダート",
+          "course": null,
+          "circumference": "1100",
+          "width": "19.2〜24",
+          "straight": "250m（ゴールまで200m）",
+          "elevation": "1",
+          "bias": "1周1100mの右回りで高低差は1mとほぼ平坦。砂の粒が他場より大きく、パワーがある馬が有利とされる。",
+          "sources": [
+            "https://www.keiba.go.jp/guide/course/",
+            "https://www.keiba.go.jp/guide/course_record/"
+          ],
+          "distances": [
+            900,
+            1300,
+            1400,
+            1750,
+            1800,
+            1860,
+            2000,
+            2500
+          ],
+          "starts": {},
+          "records": {
+            "900": {
+              "time": "0:52.2",
+              "horse": "ドラゴンゲート",
+              "jockey": "田中純タナカジュン",
+              "date": "2020/06/21"
+            },
+            "1300": {
+              "time": "1:19.9",
+              "horse": "ダノングッド",
+              "jockey": "多田羅誠也タタラセイヤ",
+              "date": "2023/01/15"
+            },
+            "1400": {
+              "time": "1:23.8",
+              "horse": "スーニ",
+              "jockey": "川田将雅カワダユウガ",
+              "date": "2011/08/16"
+            },
+            "1750": {
+              "time": "1:51.1",
+              "horse": "ダイワボルドー",
+              "jockey": "鮫島克也サメシマカツヤ",
+              "date": "2014/11/30"
+            },
+            "1800": {
+              "time": "1:53.7",
+              "horse": "キングプライド",
+              "jockey": "川島拓カワシマタク",
+              "date": "2018/05/13"
+            },
+            "1860": {
+              "time": "1:58.8",
+              "horse": "ビルンバウム",
+              "jockey": "石川慎将イシカワシンスケ",
+              "date": "2024/09/01"
+            },
+            "2000": {
+              "time": "2:05.0",
+              "horse": "クリンチャー",
+              "jockey": "川田将雅カワダユウガ",
+              "date": "2021/02/11"
+            },
+            "2500": {
+              "time": "2:43.5",
+              "horse": "グレイトパール",
+              "jockey": "鮫島克也サメシマカツヤ",
+              "date": "2020/10/25"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "overseas": [
+    {
+      "slug": "maidan",
+      "name": "メイダン",
+      "country": "アラブ首長国連邦",
+      "races": [
+        {
+          "name": "アルマクトゥームチャレンジ",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1900,
+          "date": "1月23日（金曜）"
+        },
+        {
+          "name": "ゴドルフィンマイル",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1600,
+          "date": "3月28日（土曜）"
+        },
+        {
+          "name": "ドバイゴールドカップ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 3200,
+          "date": "3月28日（土曜）"
+        },
+        {
+          "name": "UAEダービー（G2）UAEDerby",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1900,
+          "date": "3月28日（土曜）"
+        },
+        {
+          "name": "アルクオーツスプリント",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1200,
+          "date": "3月28日（土曜）"
+        },
+        {
+          "name": "ドバイゴールデンシャヒーン",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1200,
+          "date": "3月28日（土曜）"
+        },
+        {
+          "name": "ドバイターフ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1800,
+          "date": "3月28日（土曜）"
+        },
+        {
+          "name": "ドバイシーマクラシック",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2410,
+          "date": "3月28日（土曜）"
+        },
+        {
+          "name": "ドバイワールドカップ",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 2000,
+          "date": "3月28日（土曜）"
+        }
+      ],
+      "order": 1,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "sha-tin",
+      "name": "シャティン",
+      "country": "香港",
+      "races": [
+        {
+          "name": "センテナリースプリントカップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1200,
+          "date": "1月25日（日曜）"
+        },
+        {
+          "name": "スチュワーズカップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "1月25日（日曜）"
+        },
+        {
+          "name": "クイーンズシルバージュビリーカップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1400,
+          "date": "2月22日（日曜）"
+        },
+        {
+          "name": "香港ゴールドカップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2000,
+          "date": "3月1日（日曜）"
+        },
+        {
+          "name": "チェアマンズスプリントプライズ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1200,
+          "date": "4月26日（日曜）"
+        },
+        {
+          "name": "香港チャンピオンズマイル",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "4月26日（日曜）"
+        },
+        {
+          "name": "クイーンエリザベス2世カップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2000,
+          "date": "4月26日（日曜）"
+        },
+        {
+          "name": "チャンピオンズ&チャターカップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "5月24日（日曜）"
+        },
+        {
+          "name": "香港ヴァーズ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "12月13日（日曜）"
+        },
+        {
+          "name": "香港スプリント",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1200,
+          "date": "12月13日（日曜）"
+        },
+        {
+          "name": "香港マイル",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "12月13日（日曜）"
+        },
+        {
+          "name": "香港カップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2000,
+          "date": "12月13日（日曜）"
+        }
+      ],
+      "order": 2,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "king-abdulaziz",
+      "name": "キングアブドゥルアジーズ",
+      "country": "サウジアラビア",
+      "races": [
+        {
+          "name": "サウジダービー",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1600,
+          "date": "2月14日（土曜）"
+        },
+        {
+          "name": "リヤドダートスプリント",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1200,
+          "date": "2月14日（土曜）"
+        },
+        {
+          "name": "1351ターフスプリント",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1351,
+          "date": "2月14日（土曜）"
+        },
+        {
+          "name": "ネオムターフカップ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2100,
+          "date": "2月14日（土曜）"
+        },
+        {
+          "name": "レッドシーターフハンデキャップ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 3000,
+          "date": "2月14日（土曜）"
+        },
+        {
+          "name": "サウジカップ",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1800,
+          "date": "2月14日（土曜）"
+        }
+      ],
+      "order": 3,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "rosehill-gardens",
+      "name": "ローズヒルガーデンズ",
+      "country": "オーストラリア",
+      "races": [
+        {
+          "name": "ランヴェットステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2000,
+          "date": "3月21日（土曜）"
+        },
+        {
+          "name": "タンクレッドステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "3月28日（土曜）"
+        }
+      ],
+      "order": 4,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "flemington",
+      "name": "フレミントン",
+      "country": "オーストラリア",
+      "races": [
+        {
+          "name": "オーストラリアンカップ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2000,
+          "date": "3月28日（土曜）"
+        },
+        {
+          "name": "マカイビーディーヴァステークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1600,
+          "date": "9月12日（土曜）"
+        },
+        {
+          "name": "コックスプレート",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2040,
+          "date": "10月24日（土曜）"
+        },
+        {
+          "name": "メルボルンカップ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 3200,
+          "date": "11月3日（火曜）"
+        },
+        {
+          "name": "チャンピオンズスプリント",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1200,
+          "date": "11月7日（土曜）"
+        },
+        {
+          "name": "豪チャンピオンズマイル",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1600,
+          "date": "11月7日（土曜）"
+        },
+        {
+          "name": "チャンピオンズステークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2000,
+          "date": "11月7日（土曜）"
+        }
+      ],
+      "order": 5,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "randwick",
+      "name": "ランドウィック",
+      "country": "オーストラリア",
+      "races": [
+        {
+          "name": "TJスミスステークスT.J.SmithStakes",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1200,
+          "date": "4月4日（土曜）"
+        },
+        {
+          "name": "クイーンエリザベスステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2000,
+          "date": "4月11日（土曜）"
+        },
+        {
+          "name": "ジエベレスト",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1200,
+          "date": "10月17日（土曜）"
+        },
+        {
+          "name": "豪キングチャールズ3世ステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "10月17日（土曜）"
+        }
+      ],
+      "order": 6,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "parislongchamp",
+      "name": "パリロンシャン",
+      "country": "フランス",
+      "races": [
+        {
+          "name": "ガネー賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2100,
+          "date": "4月26日（日曜）"
+        },
+        {
+          "name": "仏2000ギニー",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "5月10日（日曜）"
+        },
+        {
+          "name": "仏1000ギニー",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "5月10日（日曜）"
+        },
+        {
+          "name": "アガカーン4世賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1850,
+          "date": "5月21日（木曜）"
+        },
+        {
+          "name": "パリ大賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "7月14日（火曜）"
+        },
+        {
+          "name": "ムーランドロンシャン賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "9月6日（日曜）"
+        },
+        {
+          "name": "ヴェルメイユ賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "9月6日（日曜）"
+        },
+        {
+          "name": "凱旋門賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "10月4日（日曜）"
+        },
+        {
+          "name": "オペラ賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2000,
+          "date": "10月4日（日曜）"
+        },
+        {
+          "name": "フォレ賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1400,
+          "date": "10月4日（日曜）"
+        }
+      ],
+      "order": 7,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "newmarket",
+      "name": "ニューマーケット",
+      "country": "イギリス",
+      "races": [
+        {
+          "name": "英2000ギニー2000",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1600,
+          "date": "5月2日（土曜）"
+        },
+        {
+          "name": "英1000ギニー1000",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1600,
+          "date": "5月3日（日曜）"
+        },
+        {
+          "name": "ジュライカップ",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1200,
+          "date": "7月11日（土曜）"
+        }
+      ],
+      "order": 8,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "churchill-downs",
+      "name": "チャーチルダウンズ",
+      "country": "アメリカ合衆国",
+      "races": [
+        {
+          "name": "ターフクラシックステークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1800,
+          "date": "5月2日（土曜）"
+        },
+        {
+          "name": "ケンタッキーダービー",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 2000,
+          "date": "5月2日（土曜）"
+        }
+      ],
+      "order": 9,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "newbury",
+      "name": "ニューベリー",
+      "country": "イギリス",
+      "races": [
+        {
+          "name": "ロッキンジステークス",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1600,
+          "date": "5月16日（土曜）"
+        }
+      ],
+      "order": 10,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "laurel-park",
+      "name": "ローレルパーク",
+      "country": "アメリカ合衆国",
+      "races": [
+        {
+          "name": "プリークネスステークス",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1900,
+          "date": "5月16日（土曜）"
+        }
+      ],
+      "order": 11,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "curragh",
+      "name": "カラ",
+      "country": "アイルランド",
+      "races": [
+        {
+          "name": "愛2000ギニー",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "5月23日（土曜）"
+        },
+        {
+          "name": "タタソールズゴールドカップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2100,
+          "date": "5月24日（日曜）"
+        },
+        {
+          "name": "愛1000ギニー",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "5月24日（日曜）"
+        },
+        {
+          "name": "プリティポリーステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2000,
+          "date": "6月27日（土曜）"
+        },
+        {
+          "name": "愛ダービー",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "6月28日（日曜）"
+        },
+        {
+          "name": "アイリッシュオークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "7月18日（土曜）"
+        },
+        {
+          "name": "フライングファイブステークス",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1000,
+          "date": "9月13日（日曜）"
+        },
+        {
+          "name": "愛セントレジャー",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2800,
+          "date": "9月13日（日曜）"
+        }
+      ],
+      "order": 12,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "chantilly",
+      "name": "シャンティイ",
+      "country": "フランス",
+      "races": [
+        {
+          "name": "仏ダービー",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2100,
+          "date": "5月31日（日曜）"
+        },
+        {
+          "name": "仏オークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2100,
+          "date": "6月14日（日曜）"
+        }
+      ],
+      "order": 13,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "epsom",
+      "name": "エプソム",
+      "country": "イギリス",
+      "races": [
+        {
+          "name": "英オークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2410,
+          "date": "6月5日（金曜）"
+        },
+        {
+          "name": "コロネーションカップ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2410,
+          "date": "6月6日（土曜）"
+        },
+        {
+          "name": "英ダービー",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2410,
+          "date": "6月6日（土曜）"
+        }
+      ],
+      "order": 14,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "saratoga",
+      "name": "サラトガ",
+      "country": "アメリカ合衆国",
+      "races": [
+        {
+          "name": "マンハッタンステークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1900,
+          "date": "6月6日（土曜）"
+        },
+        {
+          "name": "ベルモントステークス",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 2000,
+          "date": "6月6日（土曜）"
+        },
+        {
+          "name": "ホイットニーステークス",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1800,
+          "date": "8月8日（土曜）"
+        },
+        {
+          "name": "クリストフクレメントターフステークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2400,
+          "date": "8月15日（土曜）"
+        },
+        {
+          "name": "トラヴァーズステークス",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 2000,
+          "date": "8月29日（土曜）"
+        }
+      ],
+      "order": 15,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "ascot",
+      "name": "アスコット",
+      "country": "イギリス",
+      "races": [
+        {
+          "name": "クイーンアンステークス",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1600,
+          "date": "6月16日（火曜）"
+        },
+        {
+          "name": "セントジェームズパレスステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1590,
+          "date": "6月16日（火曜）"
+        },
+        {
+          "name": "プリンスオブウェールズステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1990,
+          "date": "6月17日（水曜）"
+        },
+        {
+          "name": "アスコットゴールドカップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 3990,
+          "date": "6月18日（木曜）"
+        },
+        {
+          "name": "クイーンエリザベス2世ジュビリーステークス",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1200,
+          "date": "6月20日（土曜）"
+        },
+        {
+          "name": "キングジョージ6世&クイーンエリザベスステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2390,
+          "date": "7月25日（土曜）"
+        },
+        {
+          "name": "英チャンピオンズロングディスタンスカップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 3190,
+          "date": "10月17日（土曜）"
+        },
+        {
+          "name": "英チャンピオンズスプリントステークス",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1200,
+          "date": "10月17日（土曜）"
+        },
+        {
+          "name": "英チャンピオンズフィリーズ&メアズステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2390,
+          "date": "10月17日（土曜）"
+        },
+        {
+          "name": "クイーンエリザベス2世ステークス",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1600,
+          "date": "10月17日（土曜）"
+        },
+        {
+          "name": "チャンピオンステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1990,
+          "date": "10月17日（土曜）"
+        }
+      ],
+      "order": 16,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "sandown",
+      "name": "サンダウン",
+      "country": "イギリス",
+      "races": [
+        {
+          "name": "エクリプスステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1990,
+          "date": "7月4日（土曜）"
+        }
+      ],
+      "order": 17,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "saint-cloud",
+      "name": "サンクルー",
+      "country": "フランス",
+      "races": [
+        {
+          "name": "サンクルー大賞",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2400,
+          "date": "7月5日（日曜）"
+        },
+        {
+          "name": "ロワイヤルオーク賞",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 3100,
+          "date": "10月25日（日曜）"
+        }
+      ],
+      "order": 18,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "goodwood",
+      "name": "グッドウッド",
+      "country": "イギリス",
+      "races": [
+        {
+          "name": "グッドウッドカップ",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 3200,
+          "date": "7月28日（火曜）"
+        },
+        {
+          "name": "サセックスステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1600,
+          "date": "7月29日（水曜）"
+        },
+        {
+          "name": "ナッソーステークス",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 1980,
+          "date": "7月30日（木曜）"
+        }
+      ],
+      "order": 19,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "colonial-downs",
+      "name": "コロニアルダウンズ",
+      "country": "アメリカ合衆国",
+      "races": [
+        {
+          "name": "アーリントンミリオン",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2000,
+          "date": "8月1日（土曜）"
+        }
+      ],
+      "order": 20,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "hoppegarten",
+      "name": "ホッペガルテン",
+      "country": "ドイツ",
+      "races": [
+        {
+          "name": "ベルリン大賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "8月9日（日曜）"
+        }
+      ],
+      "order": 21,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "deauville",
+      "name": "ドーヴィル",
+      "country": "フランス",
+      "races": [
+        {
+          "name": "モーリスドゲスト賞",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1300,
+          "date": "8月9日（日曜）"
+        },
+        {
+          "name": "ジャックルマロワ賞",
+          "surface": "芝",
+          "direction": "直線",
+          "distance": 1600,
+          "date": "8月16日（日曜）"
+        }
+      ],
+      "order": 22,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "york",
+      "name": "ヨーク",
+      "country": "イギリス",
+      "races": [
+        {
+          "name": "インターナショナルステークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2050,
+          "date": "8月19日（水曜）"
+        },
+        {
+          "name": "ヨークシャーオークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2370,
+          "date": "8月20日（木曜）"
+        }
+      ],
+      "order": 23,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "del-mar",
+      "name": "デルマー",
+      "country": "アメリカ合衆国",
+      "races": [
+        {
+          "name": "パシフィッククラシックステークス",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 2000,
+          "date": "8月22日（土曜）"
+        }
+      ],
+      "order": 24,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "baden-baden",
+      "name": "バーデンバーデン",
+      "country": "ドイツ",
+      "races": [
+        {
+          "name": "バーデン大賞",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2400,
+          "date": "9月6日（日曜）"
+        }
+      ],
+      "order": 25,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "doncaster",
+      "name": "ドンカスター",
+      "country": "イギリス",
+      "races": [
+        {
+          "name": "英セントレジャー",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2910,
+          "date": "9月12日（土曜）"
+        }
+      ],
+      "order": 26,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "leopards-town",
+      "name": "レパーズタウン",
+      "country": "アイルランド",
+      "races": [
+        {
+          "name": "メイトロンステークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1600,
+          "date": "9月12日（土曜）"
+        },
+        {
+          "name": "アイリッシュチャンピオンステークス",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2000,
+          "date": "9月12日（土曜）"
+        }
+      ],
+      "order": 27,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "belmont-park",
+      "name": "ベルモントパーク",
+      "country": "アメリカ合衆国",
+      "races": [
+        {
+          "name": "ジョッキークラブゴールドカップ",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 2000,
+          "date": "9月18日（金曜）"
+        },
+        {
+          "name": "ジョーハーシュターフクラシック",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2400,
+          "date": "9月26日（土曜）"
+        }
+      ],
+      "order": 28,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "cologne",
+      "name": "ケルン",
+      "country": "ドイツ",
+      "races": [
+        {
+          "name": "オイロパ賞",
+          "surface": "芝",
+          "direction": "右",
+          "distance": 2400,
+          "date": "9月27日（日曜）"
+        }
+      ],
+      "order": 29,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "caulfield",
+      "name": "コーフィールド",
+      "country": "オーストラリア",
+      "races": [
+        {
+          "name": "コーフィールドカップ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2400,
+          "date": "10月17日（土曜）"
+        }
+      ],
+      "order": 30,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    },
+    {
+      "slug": "keeneland",
+      "name": "キーンランド",
+      "country": "アメリカ合衆国",
+      "races": [
+        {
+          "name": "ブリーダーズカップダートマイル",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1600,
+          "date": "10月31日（土曜）"
+        },
+        {
+          "name": "ブリーダーズカップターフスプリント",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1100,
+          "date": "10月31日（土曜）"
+        },
+        {
+          "name": "ブリーダーズカップスプリント",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1200,
+          "date": "10月31日（土曜）"
+        },
+        {
+          "name": "ブリーダーズカップフィリー&メアターフ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1900,
+          "date": "10月31日（土曜）"
+        },
+        {
+          "name": "ブリーダーズカップフィリー&メアスプリント",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1400,
+          "date": "10月31日（土曜）"
+        },
+        {
+          "name": "ブリーダーズカップマイル",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 1600,
+          "date": "10月31日（土曜）"
+        },
+        {
+          "name": "ブリーダーズカップディスタフ",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 1800,
+          "date": "10月31日（土曜）"
+        },
+        {
+          "name": "ブリーダーズカップターフ",
+          "surface": "芝",
+          "direction": "左",
+          "distance": 2400,
+          "date": "10月31日（土曜）"
+        },
+        {
+          "name": "ブリーダーズカップクラシック",
+          "surface": "ダート",
+          "direction": "左",
+          "distance": 2000,
+          "date": "10月31日（土曜）"
+        }
+      ],
+      "order": 31,
+      "sources": [
+        "https://www.jra.go.jp/keiba/overseas/racelist/release.html",
+        "https://www.jra.go.jp/keiba/overseas/country/"
+      ]
+    }
+  ]
+}
