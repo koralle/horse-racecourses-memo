@@ -1,0 +1,53 @@
+---
+title: はじめに
+description: このメモの書き方と、ページを追加する手順。
+sidebar:
+  order: 1
+---
+
+このサイトは Nimbus（Astro ベース）で動く静的サイトです。ページはすべて `src/content/docs/` 配下の MDX ファイルで、ファイルの木構造がそのまま URL とサイドバーになります。
+
+## 前提
+
+- Node 22.12 以上
+- pnpm
+
+## 手元で動かす
+
+```sh
+pnpm install
+pnpm dev
+```
+
+`http://localhost:4321/` が開きます。保存するとその場で反映されます。
+
+## ページを追加する
+
+1. `src/content/docs/` に `.mdx` ファイルを作る
+2. frontmatter に `title` を書く
+3. 保存する
+
+`title` は必須で、それ以外は任意です。`sidebar.order` を書くとサイドバー内の並び順を固定できます。
+
+<Aside type="note" title="ファイル名が URL になる">
+  `racecourses/tokyo.mdx` は `/racecourses/tokyo/` になります。日本語のファイル名も使えますが、URL が読みにくくなるので英小文字とハイフンをおすすめします。
+</Aside>
+
+## 公開前に確認する
+
+```sh
+pnpm lint:docs
+pnpm build
+```
+
+`lint:docs` はリンク切れ・frontmatter の形・見出しの階層を検査します。`--fix` を付けると直せるものは自動で直ります。
+
+## 構成
+
+| パス | 中身 |
+| --- | --- |
+| `src/content/docs/` | 記事本体（MDX） |
+| `src/components/ui/` | 部品（Aside、Steps、Tabs など） |
+| `src/styles/` | デザイントークンと本文スタイル |
+| `astro.config.ts` | サイト名、説明、サイドバー構成 |
+| `nimbus.json` | Nimbus CLI が管理する導入記録（コミットする） |
