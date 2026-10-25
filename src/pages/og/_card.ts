@@ -38,6 +38,11 @@ const renderer = await createCardRenderer({
   fonts: [
     { name: "Inter", source: font("Inter-Regular.ttf"), weight: 400 },
     { name: "Inter", source: font("Inter-Medium.ttf"), weight: 500 },
+    // Japanese glyphs: Inter has none, so Satori falls back here for 日本語.
+    // Static instances (wght 400/500) of Noto Sans JP, subset to kana + kanji
+    // + Latin. Satori cannot parse the variable font's fvar table.
+    { name: "Noto Sans JP", source: font("NotoSansJP-Regular.ttf"), weight: 400 },
+    { name: "Noto Sans JP", source: font("NotoSansJP-Medium.ttf"), weight: 500 },
   ],
   emoji: "strip",
 });
